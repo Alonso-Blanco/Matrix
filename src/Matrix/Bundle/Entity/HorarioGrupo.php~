@@ -1,0 +1,45 @@
+<?php
+
+namespace Matrix\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * HorarioGrupo
+ *
+ * @ORM\Table(name="horario_grupo", indexes={@ORM\Index(name="fk_horario_has_grupo_grupo1_idx", columns={"grupo_id"}), @ORM\Index(name="fk_horario_has_grupo_horario1_idx", columns={"horario_id"})})
+ * @ORM\Entity
+ */
+class HorarioGrupo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Grupo
+     *
+     * @ORM\ManyToOne(targetEntity="Grupo")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="grupo_id", referencedColumnName="id")
+     * })
+     */
+    private $grupo;
+
+    /**
+     * @var \Horario
+     *
+     * @ORM\ManyToOne(targetEntity="Horario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="horario_id", referencedColumnName="id")
+     * })
+     */
+    private $horario;
+
+
+}

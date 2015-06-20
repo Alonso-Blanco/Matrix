@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">Información del Usuario</h1>
+
+    <table class="table-list table record_properties">
+        <thead>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+            <th>Nombre Completo</th>
+            <th>Cédula</th>
+            <th>Carné</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+        </thead>
+        <tbody>           
+            <td>{{ entity.usuario }}</td>            
+            <td>{{ entity.contrasena }}</td>            
+            <td>{{ entity.rol }}</td>            
+            <td>{{ entity.nombrecompleto }}</td>            
+            <td>{{ entity.cedula }}</td>            
+            <td>{{ entity.carne }}</td>            
+            <td>{{ entity.telefono }}</td>            
+            <td>{{ entity.direccion }}</td>            
+        </tbody>
+    </table>
+
+    <ul class="record_actions">
+        <li class="list-tb">
+            <a href="{{ path('usuario') }}"><button class="button-new btn btn-primary">Volver a los Usuarios</button></a>
+        </li>
+        <li class="list-tb">
+            <a href="{{ path('usuario_edit', { 'id': entity.id }) }}"><button class="button-new btn btn-primary">Editar</button></a>
+        </li>
+        {{ form(delete_form) }}
+</ul>
+{% endblock %}

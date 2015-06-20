@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+    {% for e in entity %}
+            <a href="{{ path('estudiantegrupo_asignarnoras', { 'id': e.id }) }}">
+                <h3>Grupo: {{ e }}</h3>
+            </a>
+
+    {% endfor %}
+
+</table>
+{% endblock %}

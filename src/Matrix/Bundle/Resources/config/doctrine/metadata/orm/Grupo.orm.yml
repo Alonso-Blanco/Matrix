@@ -1,0 +1,46 @@
+Grupo:
+    type: entity
+    table: grupo
+    indexes:
+        fk_grupo_curso1_idx:
+            columns:
+                - curso_id
+        fk_grupo_usuario1_idx:
+            columns:
+                - profesor_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        numerogrupo:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: numeroGrupo
+    manyToOne:
+        curso:
+            targetEntity: Curso
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                curso_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        profesor:
+            targetEntity: Usuario
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                profesor_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

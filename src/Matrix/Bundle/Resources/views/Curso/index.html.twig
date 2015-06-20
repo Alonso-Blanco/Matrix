@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">Lista de Cursos</h1>
+
+    <table class="table-list table">
+        <thead> 
+            <tr>                
+                <th>Sigla</th>
+                <th>Nombre del Curso</th>
+                <th>Créditos</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.sigla }}</td>
+                <td>{{ entity.nombreCurso }}</td>
+                <td>{{ entity.creditos }}</td>
+                <td>
+                <ul class="acciones-tb">
+                    <li class="list-tb">
+                        <a href="{{ path('curso_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
+                    </li>
+                    <li class="list-tb">
+                        <a href="{{ path('curso_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li class="list-tb">
+            <a href="{{ path('curso_new') }}"><button class="button-new btn btn-primary">Crear nuevo Curso</button></a>
+        </li>
+    </ul>
+    {% endblock %}

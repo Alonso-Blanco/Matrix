@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">Carrera</h1>
+
+    <table class="table-list table record_properties">
+        <thead>
+            <th>Código de Carrera</th>
+            <th>Nombre de Carrera</th>
+        </thead>
+        <tbody>               
+            <td>{{ entity.codigocarrera }}</td>            
+            <td>{{ entity.nombrecarrera }}</td>            
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li class="list-tb">
+        <a href="{{ path('carrera') }}">
+            <button class="button-new btn btn-primary">Volver a las Carreras</button>
+        </a>
+    </li>
+    <li class="list-tb">
+        <a href="{{ path('carrera_edit', { 'id': entity.id }) }}">
+            <button class="button-new btn btn-primary">Editar</button>
+        </a>
+    </li>
+    {{ form(delete_form) }}
+</ul>
+{% endblock %}

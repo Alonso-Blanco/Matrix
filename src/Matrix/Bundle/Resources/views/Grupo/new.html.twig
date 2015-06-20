@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 lass="header-list">Crear Grupo</h1>
+
+    {{ form(form) }}
+
+    <ul class="record_actions">
+	    <li class="list-tb">
+	        <a href="{{ path('grupo') }}">
+	            <button class="button-new btn btn-primary">Volver lista Grupos</button>
+	        </a>
+	    </li>
+	</ul>
+{% endblock %}

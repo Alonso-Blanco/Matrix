@@ -1,0 +1,38 @@
+grupo:
+    path:     /
+    defaults: { _controller: "MatrixBundle:Grupo:index" }
+
+grupo_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:Grupo:show" }
+
+grupo_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:Grupo:reporte" }
+
+grupo_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:Grupo:info" }
+
+grupo_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:Grupo:new" }
+
+grupo_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:Grupo:create" }
+    methods:  POST
+
+grupo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:Grupo:edit" }
+
+grupo_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:Grupo:update" }
+    methods:  [POST, PUT]
+
+grupo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:Grupo:delete" }
+    methods:  [POST, DELETE]

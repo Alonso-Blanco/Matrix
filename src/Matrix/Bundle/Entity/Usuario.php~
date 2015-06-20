@@ -1,0 +1,91 @@
+<?php
+
+namespace Matrix\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuario
+ *
+ * @ORM\Table(name="usuario", uniqueConstraints={@ORM\UniqueConstraint(name="cedula_UNIQUE", columns={"cedula"})}, indexes={@ORM\Index(name="fk_usuario_Carrera1_idx", columns={"carrera_id"})})
+ * @ORM\Entity
+ */
+class Usuario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usuario", type="string", length=12, nullable=false)
+     */
+    private $usuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contrasena", type="string", length=14, nullable=false)
+     */
+    private $contrasena;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rol", type="string", nullable=false)
+     */
+    private $rol;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombreCompleto", type="string", length=45, nullable=false)
+     */
+    private $nombrecompleto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cedula", type="string", length=12, nullable=false)
+     */
+    private $cedula;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="carne", type="string", length=7, nullable=true)
+     */
+    private $carne;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=10, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="text", nullable=true)
+     */
+    private $direccion;
+
+    /**
+     * @var \Carrera
+     *
+     * @ORM\ManyToOne(targetEntity="Carrera")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="carrera_id", referencedColumnName="id")
+     * })
+     */
+    private $carrera;
+
+
+}

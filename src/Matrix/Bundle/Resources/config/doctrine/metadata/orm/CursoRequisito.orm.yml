@@ -1,0 +1,39 @@
+CursoRequisito:
+    type: entity
+    table: curso_requisito
+    indexes:
+        fk_curso_has_curso_curso2_idx:
+            columns:
+                - requisito_id
+        fk_curso_has_curso_curso1_idx:
+            columns:
+                - curso_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        curso:
+            targetEntity: Curso
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                curso_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        requisito:
+            targetEntity: Curso
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                requisito_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

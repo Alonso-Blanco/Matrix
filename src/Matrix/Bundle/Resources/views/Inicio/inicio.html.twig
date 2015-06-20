@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body -%}
+
+	{% if (app.session.get('login').usuario == '' )   %}
+
+	{%  else %}
+	<!--
+		<h1>Bienvenida(o) {{app.session.get('login').id }} {{app.session.get('login').usuario }}</h1>
+		<p>Eres un usuario: {{app.session.get('login').rol}}</p> 
+	-->
+	
+	{%  endif %}
+{% endblock %}	

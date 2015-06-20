@@ -1,0 +1,41 @@
+Matrix_curso:
+    resource: "@MatrixBundle/Resources/config/routing/curso.yml"
+    prefix:   /curso
+
+Matrix_carrera:
+    resource: "@MatrixBundle/Resources/config/routing/carrera.yml"
+    prefix:   /carrera
+
+Matrix_cursoCorequisito:
+    resource: "@MatrixBundle/Resources/config/routing/cursoCorequisito.yml"
+    prefix:   /cursoCorequisito
+
+Matrix_cursoRequisito:
+    resource: "@MatrixBundle/Resources/config/routing/cursoRequisito.yml"
+    prefix:   /cursoRequisito
+
+Matrix_estudianteGrupo:
+    resource: "@MatrixBundle/Resources/config/routing/estudianteGrupo.yml"
+    prefix:   /estudianteGrupo
+
+Matrix_grupo:
+    resource: "@MatrixBundle/Resources/config/routing/grupo.yml"
+    prefix:   /grupo
+
+Matrix_horario:
+    resource: "@MatrixBundle/Resources/config/routing/horario.yml"
+    prefix:   /horario
+
+Matrix_horarioGrupo:
+    resource: "@MatrixBundle/Resources/config/routing/horarioGrupo.yml"
+    prefix:   /horarioGrupo
+
+Matrix_usuario:
+    resource: "@MatrixBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+
+inicio:
+    path: /inicio
+    defaults: { _controller: "MatrixBundle:Inicio:index" }
+    requirements:
+        _method: GET

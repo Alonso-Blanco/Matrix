@@ -1,0 +1,38 @@
+cursoCorequisito:
+    path:     /
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:index" }
+
+cursoCorequisito_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:show" }
+
+cursoCorequisito_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:reporte" }
+
+cursoCorequisito_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:info" }
+
+cursoCorequisito_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:new" }
+
+cursoCorequisito_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:create" }
+    methods:  POST
+
+cursoCorequisito_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:edit" }
+
+cursoCorequisito_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:update" }
+    methods:  [POST, PUT]
+
+cursoCorequisito_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:CursoCorequisito:delete" }
+    methods:  [POST, DELETE]

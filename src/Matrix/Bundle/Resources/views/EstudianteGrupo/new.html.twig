@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">EstudianteGrupo creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li class="list-tb">
+        <a href="{{ path('estudiantegrupo') }}">
+            <button class="button-new btn btn-primary">Volver a la lista</button>
+        </a>
+        </a>
+    </li>
+</ul>
+{% endblock %}

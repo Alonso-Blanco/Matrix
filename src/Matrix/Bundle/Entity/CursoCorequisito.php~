@@ -1,0 +1,45 @@
+<?php
+
+namespace Matrix\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CursoCorequisito
+ *
+ * @ORM\Table(name="curso_corequisito", indexes={@ORM\Index(name="fk_curso_has_curso_curso4_idx", columns={"corequisito_id"}), @ORM\Index(name="fk_curso_has_curso_curso3_idx", columns={"curso_id"})})
+ * @ORM\Entity
+ */
+class CursoCorequisito
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Curso
+     *
+     * @ORM\ManyToOne(targetEntity="Curso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="curso_id", referencedColumnName="id")
+     * })
+     */
+    private $curso;
+
+    /**
+     * @var \Curso
+     *
+     * @ORM\ManyToOne(targetEntity="Curso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="corequisito_id", referencedColumnName="id")
+     * })
+     */
+    private $corequisito;
+
+
+}

@@ -1,0 +1,38 @@
+carrera:
+    path:     /
+    defaults: { _controller: "MatrixBundle:Carrera:index" }
+
+carrera_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:Carrera:show" }
+
+carrera_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:Carrera:reporte" }
+
+carrera_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:Carrera:info" }
+
+carrera_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:Carrera:new" }
+
+carrera_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:Carrera:create" }
+    methods:  POST
+
+carrera_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:Carrera:edit" }
+
+carrera_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:Carrera:update" }
+    methods:  [POST, PUT]
+
+carrera_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:Carrera:delete" }
+    methods:  [POST, DELETE]

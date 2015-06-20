@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="{{ asset('bundles/matrix/css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
+        <link href="{{ asset('bundles/matrix/css/form.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bundles/matrix/css/styles.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        
+        {% block nav %}
+            {% if ((app.session.get('login').rol) is defined )   %}
+               <nav class="navbar navbar-default navbar-fixed-top">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    <a class="navbar-brand" href="#">Matrix</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav"> 
+                        {% if (app.session.get('login').rol == 'Administrador' )   %}    
+                            <li><a href="{{path('usuario')}}">Usuarios</a></li>                      
+                            <li><a href="{{path('curso')}}">Cursos</a></li>
+                            <li><a href="{{path('cursoRequisito')}}">Requisitos de Cursos</a></li>
+                            <li><a href="{{path('cursoCorequisito')}}">Correquisitos de Cursos</a></li>
+                            <li><a href="{{path('carrera')}}">Carreras</a></li>
+                            <li><a href="{{path('grupo')}}">Grupos</a></li> 
+                            <li><a href="{{path('horario')}}">Horarios</a></li> 
+                        {%  endif %}
+                        {% if (app.session.get('login').rol == 'Profesor' )   %} 
+                            <li><a href="{{path('estudiantegrupo_asignarnorasgrupo')}}">Grupos, Estudiantes y Notas</a></li>
+                        {%  endif %}
+                        {% if (app.session.get('login').rol == 'Estudiante' )   %} 
+                            <li><a href="{{asset('app_dev.php/estudianteGrupo/matriculaCurso')}}">Matricular</a></li>
+                            <li><a href="{{asset('app_dev.php/curso/historial')}}">Historial Académico</a></li>
+                            <li><a href="{{asset('app_dev.php/curso/cursosAprobados')}}">Cursos aprobados</a></li>
+                        {%  endif %}
+                        <li id="logout-nav"><a href="{{path('usuario_logout')}}">Cerrar Sesión</a></li>
+                     </a>
+                   </div><!--/.nav-collapse -->
+                  </div>
+            </nav>
+            {%  endif %}
+        {% endblock %}
+        <br><br><br>
+        {% block body %}{% endblock %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

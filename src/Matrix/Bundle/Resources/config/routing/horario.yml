@@ -1,0 +1,38 @@
+horario:
+    path:     /
+    defaults: { _controller: "MatrixBundle:Horario:index" }
+
+horario_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:Horario:show" }
+
+horario_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:Horario:reporte" }
+
+horario_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:Horario:info" }
+
+horario_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:Horario:new" }
+
+horario_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:Horario:create" }
+    methods:  POST
+
+horario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:Horario:edit" }
+
+horario_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:Horario:update" }
+    methods:  [POST, PUT]
+
+horario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:Horario:delete" }
+    methods:  [POST, DELETE]

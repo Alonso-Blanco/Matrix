@@ -1,0 +1,38 @@
+horariogrupo:
+    path:     /
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:index" }
+
+horariogrupo_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:show" }
+
+horariogrupo_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:reporte" }
+
+horariogrupo_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:info" }
+
+horariogrupo_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:new" }
+
+horariogrupo_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:create" }
+    methods:  POST
+
+horariogrupo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:edit" }
+
+horariogrupo_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:update" }
+    methods:  [POST, PUT]
+
+horariogrupo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:HorarioGrupo:delete" }
+    methods:  [POST, DELETE]

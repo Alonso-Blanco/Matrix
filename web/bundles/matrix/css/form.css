@@ -1,0 +1,8 @@
+form {
+  	
+}
+form div { padding: 7px;}
+form div label{display: block; float: left; width: 150px;}
+select:focus, textarea:focus, input:focus{background-color: #FFFDD4;}
+select:hover, textarea:hover, input:hover{background-color: lightcyan;}
+	

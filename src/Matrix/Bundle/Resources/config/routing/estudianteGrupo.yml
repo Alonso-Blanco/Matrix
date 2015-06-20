@@ -1,0 +1,58 @@
+estudiantegrupo:
+    path:     /
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:index" }
+
+estudiantegrupo_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:show" }
+
+estudiantegrupo_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:reporte" }
+
+estudiantegrupo_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:info" }
+
+estudiantegrupo_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:new" }
+
+estudiantegrupo_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:create" }
+    methods:  POST
+
+estudiantegrupo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:edit" }
+
+estudiantegrupo_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:update" }
+    methods:  [POST, PUT]
+
+estudiantegrupo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:delete" }
+    methods:  [POST, DELETE]
+
+estudiantegrupo_matriculacurso:
+    path:     /matriculaCurso
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:matriculaCurso" }
+
+estudiantegrupo_matriculagrupo:
+    path:     /{id}/matriculaGrupo
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:matriculaGrupo" }
+
+estudiantegrupo_matricula:
+    path:     /{id}/matricula
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:matricula" }
+
+estudiantegrupo_asignarnorasgrupo:
+    path:     /asignarNotasGrupo
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:asignarNotasGrupo" }
+
+estudiantegrupo_asignarnoras:
+    path:     /{id}/asignarNotas
+    defaults: { _controller: "MatrixBundle:EstudianteGrupo:asignarNotas" }

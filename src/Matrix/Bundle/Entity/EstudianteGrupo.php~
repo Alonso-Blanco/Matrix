@@ -1,0 +1,52 @@
+<?php
+
+namespace Matrix\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EstudianteGrupo
+ *
+ * @ORM\Table(name="estudiante_grupo", indexes={@ORM\Index(name="fk_usuario_has_grupo_grupo1_idx", columns={"grupo_id"}), @ORM\Index(name="fk_usuario_has_grupo_usuario1_idx", columns={"usuario_id"})})
+ * @ORM\Entity
+ */
+class EstudianteGrupo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="nota", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $nota;
+
+    /**
+     * @var \Grupo
+     *
+     * @ORM\ManyToOne(targetEntity="Grupo")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="grupo_id", referencedColumnName="id")
+     * })
+     */
+    private $grupo;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     * })
+     */
+    private $usuario;
+
+
+}

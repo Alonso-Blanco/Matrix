@@ -1,0 +1,81 @@
+Usuario:
+    type: entity
+    table: usuario
+    indexes:
+        fk_usuario_Carrera1_idx:
+            columns:
+                - carrera_id
+    uniqueConstraints:
+        cedula_UNIQUE:
+            columns:
+                - cedula
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        usuario:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: ''
+        contrasena:
+            type: string
+            nullable: false
+            length: 14
+            fixed: false
+            comment: ''
+        rol:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        nombrecompleto:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            column: nombreCompleto
+        cedula:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: ''
+        carne:
+            type: string
+            nullable: true
+            length: 7
+            fixed: false
+            comment: ''
+        telefono:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        direccion:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+    manyToOne:
+        carrera:
+            targetEntity: Carrera
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                carrera_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

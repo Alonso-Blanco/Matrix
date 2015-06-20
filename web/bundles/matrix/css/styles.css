@@ -1,0 +1,65 @@
+#login {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width:400px;
+	margin-left:-200px;	
+	margin-top:-150px;	
+	padding:5px;
+}
+
+#botton-lg {
+	width: 40%;
+	margin: 0 auto 1%;
+}
+
+#input-lg {
+	margin: 0 auto 2%;
+	width: 70%;
+}
+
+#header-lg {
+	font-family: 'Oxygen', sans-serif;
+}
+
+#logout-nav {
+	margin-left: 100px;
+}
+
+.list-tb {
+	list-style: none;
+	display: inline;
+
+}
+
+.acciones-tb {
+	padding-left: 0;
+}
+
+.table-list {
+	width: 97% !important;
+	margin-left: 20px;	
+}
+
+.header-list {
+	margin-left: 20px;	
+}
+
+.button-new {
+	margin-top: 5px;
+	margin-left: -15px;
+	margin-right: 15px;
+}
+
+.button-delete {
+	margin-top: -20px;
+	margin-left: -15px;
+	margin-right: 15px;
+	width: 60%;
+} 
+
+.form {
+	width: 40%;
+	margin-left: 15px;
+}

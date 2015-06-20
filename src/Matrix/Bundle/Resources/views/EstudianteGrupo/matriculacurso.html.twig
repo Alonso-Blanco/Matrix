@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<h1>Cursos para Matricular</h1>
+    {% for e in entity %}
+        <ul>
+            <li>
+                 <a href="{{ path('estudiantegrupo_matriculagrupo', { 'id': e.id }) }}">
+                    {{ e.id ~ ' ' ~ e.sigla ~ ' ' ~ e.nombreCurso ~ ' ' ~ e.creditos }}
+                </a>
+            </li>
+        </ul>
+    {% endfor %}
+</table> 
+{% endblock %}

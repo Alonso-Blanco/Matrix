@@ -1,0 +1,46 @@
+curso:
+    path:     /
+    defaults: { _controller: "MatrixBundle:Curso:index" }
+
+curso_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:Curso:show" }
+
+curso_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:Curso:reporte" }
+
+curso_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:Curso:info" }
+
+curso_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:Curso:new" }
+
+curso_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:Curso:create" }
+    methods:  POST
+
+curso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:Curso:edit" }
+
+curso_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:Curso:update" }
+    methods:  [POST, PUT]
+
+curso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:Curso:delete" }
+    methods:  [POST, DELETE]
+
+curso_historial:
+    path:     /historial
+    defaults: { _controller: "MatrixBundle:Curso:historial"}
+
+curso_aprobados:
+    path:     /cursosAprobados
+    defaults: { _controller: "MatrixBundle:Curso:aprobados"}

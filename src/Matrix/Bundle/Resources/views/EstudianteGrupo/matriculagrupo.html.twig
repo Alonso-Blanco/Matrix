@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+<h2>Grupos del Curso {{ curso.nombreCurso }}</h2>
+    {% set grupo = -1 %}
+    {% for e in entity %}
+        {% if grupo != e.numerogrupo %}
+            <a href="{{ path('estudiantegrupo_matricula', { 'id': e.id }) }}">
+                <h3>Grupo Número: {{ e.numerogrupo }}</h3>
+            </a>
+            {% set grupo = e.numerogrupo %}
+        {% endif %}
+
+        <p>
+            {{ e.dia ~ ' desde ' ~ e.horainicio|date("H:i") ~ ' hasta ' ~ e.horafin|date("H:i") }}
+        </p>
+    {% endfor %}
+</table>
+{% endblock %}

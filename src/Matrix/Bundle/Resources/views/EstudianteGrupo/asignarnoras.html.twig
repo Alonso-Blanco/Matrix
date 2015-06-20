@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+    {% for e in entity %}
+        <h3> 
+        <a href="{{ path('estudiantegrupo_edit', { 'id': e.id }) }}">
+        	{{ e.usuario.nombrecompleto }} 
+        </a>
+        </h3>
+    {% endfor %}
+
+</table>
+{% endblock %}

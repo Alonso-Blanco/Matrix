@@ -1,0 +1,43 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">Lista de Grupos</h1>
+
+    <table class="table-list table">
+        <thead>
+            <tr>
+                <th>Numero de Grupo</th>
+                <th>acciones-tb</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.numerogrupo }}</td>
+                <td>
+                <ul class="acciones-tb">
+                    <li class="list-tb">
+                        <a href="{{ path('grupo_show', { 'id': entity.id }) }}">
+                            <button class="btn btn-default">Ver</button>
+                        </a>
+                    </li>
+                    <li class="list-tb">
+                        <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">
+                            <button class="btn btn-default">Editar</button>
+                        </a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li class="list-tb">
+            <a href="{{ path('grupo_new') }}">
+                <button class="button-new btn btn-primary">Crear nuevo Grupo</button>
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

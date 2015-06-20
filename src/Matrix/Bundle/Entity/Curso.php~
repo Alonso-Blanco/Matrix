@@ -1,0 +1,56 @@
+<?php
+
+namespace Matrix\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Curso
+ *
+ * @ORM\Table(name="curso", indexes={@ORM\Index(name="fk_curso_Carrera1_idx", columns={"carrera_id"})})
+ * @ORM\Entity
+ */
+class Curso
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sigla", type="string", length=10, nullable=false)
+     */
+    private $sigla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre_curso", type="string", length=45, nullable=false)
+     */
+    private $nombreCurso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="creditos", type="integer", nullable=false)
+     */
+    private $creditos;
+
+    /**
+     * @var \Carrera
+     *
+     * @ORM\ManyToOne(targetEntity="Carrera")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="carrera_id", referencedColumnName="id")
+     * })
+     */
+    private $carrera;
+
+
+}

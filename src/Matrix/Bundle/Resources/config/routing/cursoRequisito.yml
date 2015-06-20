@@ -1,0 +1,38 @@
+cursoRequisito:
+    path:     /
+    defaults: { _controller: "MatrixBundle:CursoRequisito:index" }
+
+cursoRequisito_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:CursoRequisito:show" }
+
+cursoRequisito_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:CursoRequisito:reporte" }
+
+cursoRequisito_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:CursoRequisito:info" }
+
+cursoRequisito_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:CursoRequisito:new" }
+
+cursoRequisito_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:CursoRequisito:create" }
+    methods:  POST
+
+cursoRequisito_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:CursoRequisito:edit" }
+
+cursoRequisito_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:CursoRequisito:update" }
+    methods:  [POST, PUT]
+
+cursoRequisito_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:CursoRequisito:delete" }
+    methods:  [POST, DELETE]

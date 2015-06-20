@@ -1,0 +1,46 @@
+Curso:
+    type: entity
+    table: curso
+    indexes:
+        fk_curso_Carrera1_idx:
+            columns:
+                - carrera_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        sigla:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+        nombreCurso:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            column: nombre_curso
+        creditos:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    manyToOne:
+        carrera:
+            targetEntity: Carrera
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                carrera_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,46 @@
+usuario:
+    path:     /
+    defaults: { _controller: "MatrixBundle:Usuario:index" }
+
+usuario_show:
+    path:     /{id}/show
+    defaults: { _controller: "MatrixBundle:Usuario:show" }
+
+usuario_reporte:
+    path:     /reporte
+    defaults: { _controller: "MatrixBundle:Usuario:reporte" }
+
+usuario_info:
+    path:     /{id}/info
+    defaults: { _controller: "MatrixBundle:Usuario:info" }
+
+usuario_new:
+    path:     /new
+    defaults: { _controller: "MatrixBundle:Usuario:new" }
+
+usuario_create:
+    path:     /create
+    defaults: { _controller: "MatrixBundle:Usuario:create" }
+    methods:  POST
+
+usuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MatrixBundle:Usuario:edit" }
+
+usuario_update:
+    path:     /{id}/update
+    defaults: { _controller: "MatrixBundle:Usuario:update" }
+    methods:  [POST, PUT]
+
+usuario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MatrixBundle:Usuario:delete" }
+    methods:  [POST, DELETE]
+
+usuario_login:
+    path:     /login
+    defaults: { _controller: "MatrixBundle:Usuario:login" }
+
+usuario_logout:
+    path:     /logout
+    defaults: { _controller: "MatrixBundle:Usuario:logout" }

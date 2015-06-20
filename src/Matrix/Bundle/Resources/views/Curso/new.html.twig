@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 class="header-list">Crear nuevo Curso</h1>
+
+	{{ form(form) }}
+
+        <ul class="record_actions">
+    <li class="list-tb">
+        <a href="{{ path('curso') }}">
+            <button class="button-new btn btn-primary">Volver lista Cursos</button>
+        </a>
+    </li>
+</ul>
+{% endblock %}

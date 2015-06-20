@@ -1,0 +1,46 @@
+EstudianteGrupo:
+    type: entity
+    table: estudiante_grupo
+    indexes:
+        fk_usuario_has_grupo_grupo1_idx:
+            columns:
+                - grupo_id
+        fk_usuario_has_grupo_usuario1_idx:
+            columns:
+                - usuario_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nota:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+    manyToOne:
+        grupo:
+            targetEntity: Grupo
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                grupo_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        usuario:
+            targetEntity: Usuario
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                usuario_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
