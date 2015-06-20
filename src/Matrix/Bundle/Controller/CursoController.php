@@ -313,6 +313,5 @@ class CursoController extends Controller
                 'reporte' => $result,
                 'form' => $form->createView(),
                 ));
-
         }
     }
