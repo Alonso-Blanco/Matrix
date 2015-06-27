@@ -28,7 +28,7 @@ class __TwigTemplate_67c98cd7cb323f08d526e0ef1998cd8d4f53002edaa5c0fde7b2a0397fc
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoRequisito creation</h1>
+        echo "<h1>Curso-Requisito</h1>
 
     ";
         // line 6
@@ -41,7 +41,7 @@ class __TwigTemplate_67c98cd7cb323f08d526e0ef1998cd8d4f53002edaa5c0fde7b2a0397fc
         // line 10
         echo $this->env->getExtension('routing')->getPath("cursoRequisito");
         echo "\">
-            Back to the list
+            Volver a la lista
         </a>
     </li>
 </ul>

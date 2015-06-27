@@ -28,13 +28,13 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoCorequisito list</h1>
+        echo "<h1>Curso-Corrrequisito</h1>
 
     <table class=\"records_list\">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Actions</th>
+                <th>Curso</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -57,13 +57,13 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
                         <a href=\"";
             // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoCorequisito_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
+            echo "\">Mostrar</a>
                     </li>
                     <li>
                         <a href=\"";
             // line 23
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoCorequisito_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
+            echo "\">Editar</a>
                     </li>
                 </ul>
                 </td>
@@ -83,7 +83,7 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
         // line 34
         echo $this->env->getExtension('routing')->getPath("cursoCorequisito_new");
         echo "\">
-                Create a new entry
+                Crear un nuevo correquisito
             </a>
         </li>
     </ul>

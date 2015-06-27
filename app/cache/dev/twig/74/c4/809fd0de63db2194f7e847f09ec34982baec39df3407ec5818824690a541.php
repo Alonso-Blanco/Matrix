@@ -28,12 +28,12 @@ class __TwigTemplate_74c4809fd0de63db2194f7e847f09ec34982baec39df3407ec581882469
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoCorequisito</h1>
+        echo "<h1>Curso-Correquisito</h1>
 
     <table class=\"record_properties\">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Curso</th>
                 <td>";
         // line 10
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()), "html", null, true);
@@ -48,7 +48,7 @@ class __TwigTemplate_74c4809fd0de63db2194f7e847f09ec34982baec39df3407ec581882469
         // line 17
         echo $this->env->getExtension('routing')->getPath("cursoCorequisito");
         echo "\">
-            Back to the list
+           Volver a la lista
         </a>
     </li>
     <li>
@@ -56,7 +56,7 @@ class __TwigTemplate_74c4809fd0de63db2194f7e847f09ec34982baec39df3407ec581882469
         // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoCorequisito_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
-            Edit
+            Editar
         </a>
     </li>
     <li>";

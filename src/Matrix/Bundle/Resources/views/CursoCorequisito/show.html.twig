@@ -1,12 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>CursoCorequisito</h1>
+    <h1>Curso-Correquisito</h1>
 
     <table class="record_properties">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Curso</th>
                 <td>{{ entity.id }}</td>
             </tr>
         </tbody>
@@ -15,12 +15,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('cursoCorequisito') }}">
-            Back to the list
+           Volver a la lista
         </a>
     </li>
     <li>
         <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

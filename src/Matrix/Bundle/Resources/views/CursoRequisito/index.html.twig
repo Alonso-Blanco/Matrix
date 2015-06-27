@@ -1,13 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>CursoRequisito list</h1>
+    <h1>Cursos-Requisitos</h1>
 
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Actions</th>
+                <th>Curso</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -18,9 +18,10 @@
                 <ul>
                     <li>
                         <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">Mostrar</a>
                     </li>
                     <li>
-                        <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
                 </td>
@@ -32,7 +33,7 @@
         <ul>
         <li>
             <a href="{{ path('cursoRequisito_new') }}">
-                Create a new entry
+               <button class="button-new btn btn-primary">Crear nuevo Requisito</button>
             </a>
         </li>
     </ul>

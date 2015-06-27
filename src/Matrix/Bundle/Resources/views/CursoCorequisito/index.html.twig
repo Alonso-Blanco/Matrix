@@ -1,13 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>CursoCorequisito list</h1>
+    <h1>Curso-Corrrequisito</h1>
 
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Actions</th>
+                <th>Curso</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -17,10 +17,10 @@
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}">Mostrar</a>
                     </li>
                     <li>
-                        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
                 </td>
@@ -32,7 +32,7 @@
         <ul>
         <li>
             <a href="{{ path('cursoCorequisito_new') }}">
-                Create a new entry
+                Crear un nuevo correquisito
             </a>
         </li>
     </ul>
