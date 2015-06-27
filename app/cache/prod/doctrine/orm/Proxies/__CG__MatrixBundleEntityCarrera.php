@@ -232,4 +232,15 @@ class Carrera extends \Matrix\Bundle\Entity\Carrera implements \Doctrine\ORM\Pro
         return parent::getNombrecarrera();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

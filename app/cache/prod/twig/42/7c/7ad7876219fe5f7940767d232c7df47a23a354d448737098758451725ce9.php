@@ -28,57 +28,50 @@ class __TwigTemplate_427c7ad7876219fe5f7940767d232c7df47a23a354d4487370987584517
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Curso list</h1>
+        echo "<h1 class=\"header-list\">Lista de Cursos</h1>
 
-    <table class=\"records_list\">
-        <thead>
-            <tr>
-                <th>Id</th>
+    <table class=\"table-list table\">
+        <thead> 
+            <tr>                
                 <th>Sigla</th>
-                <th>Nombrecurso</th>
-                <th>Creditos</th>
-                <th>Actions</th>
+                <th>Nombre del Curso</th>
+                <th>Créditos</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 17
+        // line 16
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 18
+            // line 17
             echo "            <tr>
-                <td><a href=\"";
-            // line 19
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("curso_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
-            echo "</a></td>
                 <td>";
-            // line 20
+            // line 18
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "sigla", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 21
+            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "nombreCurso", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 22
+            // line 20
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "creditos", array()), "html", null, true);
             echo "</td>
                 <td>
-                <ul>
-                    <li>
+                <ul class=\"acciones-tb\">
+                    <li class=\"list-tb\">
                         <a href=\"";
-            // line 26
+            // line 24
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("curso_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
+            echo "\"><button class=\"btn btn-default\">Ver</button></a>
                     </li>
-                    <li>
+                    <li class=\"list-tb\">
                         <a href=\"";
-            // line 29
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("curso_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
+            echo "\"><button class=\"btn btn-default\">Editar</button></a>
                     </li>
                 </ul>
                 </td>
@@ -88,18 +81,16 @@ class __TwigTemplate_427c7ad7876219fe5f7940767d232c7df47a23a354d4487370987584517
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 33
         echo "        </tbody>
     </table>
 
         <ul>
-        <li>
+        <li class=\"list-tb\">
             <a href=\"";
-        // line 40
+        // line 38
         echo $this->env->getExtension('routing')->getPath("curso_new");
-        echo "\">
-                Create a new entry
-            </a>
+        echo "\"><button class=\"button-new btn btn-primary\">Crear nuevo Curso</button></a>
         </li>
     </ul>
     ";
@@ -117,6 +108,6 @@ class __TwigTemplate_427c7ad7876219fe5f7940767d232c7df47a23a354d4487370987584517
 
     public function getDebugInfo()
     {
-        return array (  99 => 40,  92 => 35,  80 => 29,  74 => 26,  67 => 22,  63 => 21,  59 => 20,  53 => 19,  50 => 18,  46 => 17,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  92 => 38,  85 => 33,  73 => 27,  67 => 24,  60 => 20,  56 => 19,  52 => 18,  49 => 17,  45 => 16,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

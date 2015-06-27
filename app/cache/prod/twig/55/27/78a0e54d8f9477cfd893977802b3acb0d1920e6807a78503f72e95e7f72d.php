@@ -28,7 +28,7 @@ class __TwigTemplate_552778a0e54d8f9477cfd893977802b3acb0d1920e6807a78503f72e95e
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Usuario edit</h1>
+        echo "<h1 class=\"header-list\">Editar Usuario</h1>
 
     ";
         // line 6
@@ -36,18 +36,16 @@ class __TwigTemplate_552778a0e54d8f9477cfd893977802b3acb0d1920e6807a78503f72e95e
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("usuario");
-        echo "\">
-            Back to the list
-        </a>
+        echo "\"><button class=\"button-new btn btn-primary\">Volver a los Cursos</button></a>
     </li>
-    <li>";
-        // line 14
+    ";
+        // line 12
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
+        echo "
 </ul>
 ";
     }
@@ -64,6 +62,6 @@ class __TwigTemplate_552778a0e54d8f9477cfd893977802b3acb0d1920e6807a78503f72e95e
 
     public function getDebugInfo()
     {
-        return array (  49 => 14,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  47 => 12,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

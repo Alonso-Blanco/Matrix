@@ -50,14 +50,14 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
                 <th>Horainicio</th>
                 <td>";
         // line 18
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horainicio", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horainicio", array()), "H:i"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Horafin</th>
                 <td>";
         // line 22
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horafin", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horafin", array()), "H:i"), "html", null, true);
         echo "</td>
             </tr>
         </tbody>

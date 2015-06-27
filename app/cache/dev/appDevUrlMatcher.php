@@ -276,6 +276,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
                 not_carrera_delete:
 
+                // carrera_cursos
+                if ($pathinfo === '/carrera/cursos') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\CarreraController::cursosAction',  '_route' => 'carrera_cursos',);
+                }
+
             }
 
             if (0 === strpos($pathinfo, '/curso')) {

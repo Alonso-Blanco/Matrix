@@ -254,4 +254,15 @@ class Horario extends \Matrix\Bundle\Entity\Horario implements \Doctrine\ORM\Pro
         return parent::getHorafin();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

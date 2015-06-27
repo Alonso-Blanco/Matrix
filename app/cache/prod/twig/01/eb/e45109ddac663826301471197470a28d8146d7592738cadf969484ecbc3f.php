@@ -28,23 +28,23 @@ class __TwigTemplate_01ebe45109ddac663826301471197470a28d8146d7592738cadf969484e
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Grupo creation</h1>
+        echo "<h1 lass=\"header-list\">Crear Grupo</h1>
 
     ";
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form');
         echo "
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+    <ul class=\"record_actions\">
+\t    <li class=\"list-tb\">
+\t        <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("grupo");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-</ul>
+\t            <button class=\"button-new btn btn-primary\">Volver lista Grupos</button>
+\t        </a>
+\t    </li>
+\t</ul>
 ";
     }
 

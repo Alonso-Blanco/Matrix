@@ -246,4 +246,31 @@ class CarreraController extends Controller
             ->getForm()
         ;
     }
+
+    public function cursosAction(Request $request)
+    {
+        $session = $request->getSession();
+        $cedula = $session -> get('login') -> getCedula();
+    
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('MatrixBundle:Usuario');
+        $usuario = $repository-> findOneBy(array('cedula'=> $cedula));
+
+        $repository = $em->getRepository('MatrixBundle:Curso');
+        $cursos = $repository-> findBy(array('carrera'=> $usuario->getCarrera()));
+
+        $repository = $em->getRepository('MatrixBundle:CursoRequisito');
+        $requisitos = $repository-> findAll();
+
+        $repository = $em->getRepository('MatrixBundle:CursoCorequisito');
+        $corequisitos = $repository-> findAll();
+
+    
+        return $this->render('MatrixBundle:Carrera:mayacurricular.html.twig', array(
+            'carrera' => $usuario->getCarrera(),
+            'cursos' => $cursos,
+            'requisitos' => $requisitos,
+            'corequisitos' => $corequisitos,
+            ));
+    }
 }

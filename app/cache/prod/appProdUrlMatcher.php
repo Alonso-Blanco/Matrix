@@ -96,6 +96,16 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 }
                 not_curso_delete:
 
+                // curso_historial
+                if ($pathinfo === '/curso/historial') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\CursoController::historialAction',  '_route' => 'curso_historial',);
+                }
+
+                // curso_aprobados
+                if ($pathinfo === '/curso/cursosAprobados') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\CursoController::aprobadosAction',  '_route' => 'curso_aprobados',);
+                }
+
             }
 
             if (0 === strpos($pathinfo, '/carrera')) {
@@ -165,6 +175,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'carrera_delete')), array (  '_controller' => 'Matrix\\Bundle\\Controller\\CarreraController::deleteAction',));
                 }
                 not_carrera_delete:
+
+                // carrera_cursos
+                if ($pathinfo === '/carrera/cursos') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\CarreraController::cursosAction',  '_route' => 'carrera_cursos',);
+                }
 
             }
 
@@ -380,6 +395,31 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'estudiantegrupo_delete')), array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::deleteAction',));
             }
             not_estudiantegrupo_delete:
+
+            // estudiantegrupo_matriculacurso
+            if ($pathinfo === '/estudianteGrupo/matriculaCurso') {
+                return array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::matriculaCursoAction',  '_route' => 'estudiantegrupo_matriculacurso',);
+            }
+
+            // estudiantegrupo_matriculagrupo
+            if (preg_match('#^/estudianteGrupo/(?P<id>[^/]++)/matriculaGrupo$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'estudiantegrupo_matriculagrupo')), array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::matriculaGrupoAction',));
+            }
+
+            // estudiantegrupo_matricula
+            if (preg_match('#^/estudianteGrupo/(?P<id>[^/]++)/matricula$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'estudiantegrupo_matricula')), array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::matriculaAction',));
+            }
+
+            // estudiantegrupo_asignarnorasgrupo
+            if ($pathinfo === '/estudianteGrupo/asignarNotasGrupo') {
+                return array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::asignarNotasGrupoAction',  '_route' => 'estudiantegrupo_asignarnorasgrupo',);
+            }
+
+            // estudiantegrupo_asignarnoras
+            if (preg_match('#^/estudianteGrupo/(?P<id>[^/]++)/asignarNotas$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'estudiantegrupo_asignarnoras')), array (  '_controller' => 'Matrix\\Bundle\\Controller\\EstudianteGrupoController::asignarNotasAction',));
+            }
 
         }
 
@@ -661,7 +701,31 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             }
             not_usuario_delete:
 
+            if (0 === strpos($pathinfo, '/usuario/log')) {
+                // usuario_login
+                if ($pathinfo === '/usuario/login') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\UsuarioController::loginAction',  '_route' => 'usuario_login',);
+                }
+
+                // usuario_logout
+                if ($pathinfo === '/usuario/logout') {
+                    return array (  '_controller' => 'Matrix\\Bundle\\Controller\\UsuarioController::logoutAction',  '_route' => 'usuario_logout',);
+                }
+
+            }
+
         }
+
+        // inicio
+        if ($pathinfo === '/inicio') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_inicio;
+            }
+
+            return array (  '_controller' => 'Matrix\\Bundle\\Controller\\InicioController::indexAction',  '_route' => 'inicio',);
+        }
+        not_inicio:
 
         // homepage
         if ($pathinfo === '/app/example') {

@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+<h1>Maya Curricular de la Carrera {{ carrera.nombreCarrera }}</h1>
+
+<p>
+    Cursos
+    {% for c in cursos %}
+        {{ c }}
+    {% endfor %}
+</p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Requisitos</th>
+            <th>Corequisitos</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in cursos %}
+        <tr>
+            <td>
+                <a href="{{ path('curso_show', { 'id': c.id }) }}">
+                    {{ c.sigla ~ ' - ' ~ c.nombreCurso }}
+                </a>
+            </td>
+            <td>
+            {% for r in requisitos %}
+                {% if c.id == r.curso.id %}
+                    {{ r.requisito }}
+                {% endif %}
+            {% endfor %}
+            </td>
+            <td>
+            {% for cr in corequisitos %}
+                {% if c.id == cr.curso.id %}
+                    {{ cr.corequisito }}
+                {% endif %}
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}

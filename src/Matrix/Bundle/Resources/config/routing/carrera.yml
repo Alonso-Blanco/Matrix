@@ -36,3 +36,7 @@ carrera_delete:
     path:     /{id}/delete
     defaults: { _controller: "MatrixBundle:Carrera:delete" }
     methods:  [POST, DELETE]
+
+carrera_cursos:
+    path:     /cursos
+    defaults: { _controller: "MatrixBundle:Carrera:cursos" }

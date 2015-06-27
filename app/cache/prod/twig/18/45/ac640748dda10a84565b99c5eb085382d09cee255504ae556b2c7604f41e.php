@@ -28,7 +28,7 @@ class __TwigTemplate_1845ac640748dda10a84565b99c5eb085382d09cee255504ae556b2c760
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Grupo edit</h1>
+        echo "<h1 class=\"header-list\">Editar Grupo</h1>
 
     ";
         // line 6
@@ -36,18 +36,18 @@ class __TwigTemplate_1845ac640748dda10a84565b99c5eb085382d09cee255504ae556b2c760
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("grupo");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver a los Cursos</button>
         </a>
     </li>
-    <li>";
+    ";
         // line 14
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
+        echo "
 </ul>
 ";
     }

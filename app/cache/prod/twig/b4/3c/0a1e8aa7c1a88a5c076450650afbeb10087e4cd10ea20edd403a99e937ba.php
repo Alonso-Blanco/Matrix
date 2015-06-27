@@ -28,48 +28,42 @@ class __TwigTemplate_b43c0a1e8aa7c1a88a5c076450650afbeb10087e4cd10ea20edd403a99e
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Grupo</h1>
+        echo "<h1 class=\"header-list\">Información del Grupo</h1>
 
-    <table class=\"record_properties\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
-        // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Numerogrupo</th>
-                <td>";
-        // line 14
+    <table class=\"table-list table record_properties\">
+        <thead>
+            <th>Numero de Grupo</th>            
+        </thead>
+        <tbody>            
+            <td>";
+        // line 11
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "numerogrupo", array()), "html", null, true);
-        echo "</td>
-            </tr>
+        echo "</td>            
         </tbody>
     </table>
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
-        // line 21
+        // line 17
         echo $this->env->getExtension('routing')->getPath("grupo");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver a los Grupos</button>
         </a>
     </li>
-    <li>
+    <li  class=\"list-tb\">
         <a href=\"";
-        // line 26
+        // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()))), "html", null, true);
         echo "\">
-            Edit
+            <button class=\"button-new btn btn-primary\">Editar</button>
+
         </a>
     </li>
-    <li>";
-        // line 30
+    ";
+        // line 27
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
+        echo "
 </ul>
 ";
     }
@@ -86,6 +80,6 @@ class __TwigTemplate_b43c0a1e8aa7c1a88a5c076450650afbeb10087e4cd10ea20edd403a99e
 
     public function getDebugInfo()
     {
-        return array (  71 => 30,  64 => 26,  56 => 21,  46 => 14,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  65 => 27,  57 => 22,  49 => 17,  40 => 11,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

@@ -28,7 +28,7 @@ class __TwigTemplate_c966b3a9b02daf52fcdfa79fbefc8921bed6b0439fe690768b61e737b0e
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>EstudianteGrupo creation</h1>
+        echo "<h1 class=\"header-list\">EstudianteGrupo creation</h1>
 
     ";
         // line 6
@@ -36,12 +36,13 @@ class __TwigTemplate_c966b3a9b02daf52fcdfa79fbefc8921bed6b0439fe690768b61e737b0e
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("estudiantegrupo");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver a la lista</button>
+        </a>
         </a>
     </li>
 </ul>

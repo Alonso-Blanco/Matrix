@@ -28,20 +28,20 @@ class __TwigTemplate_c66d1ea47c8c0a46b7caa55d52cddc1631bd63a41f9ef7812d5c6fee13c
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Curso creation</h1>
+        echo "<h1 class=\"header-list\">Crear nuevo Curso</h1>
 
-    ";
+\t";
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form');
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("curso");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver lista Cursos</button>
         </a>
     </li>
 </ul>

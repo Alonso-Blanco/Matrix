@@ -28,47 +28,44 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Grupo list</h1>
+        echo "<h1 class=\"header-list\">Lista de Grupos</h1>
 
-    <table class=\"records_list\">
+    <table class=\"table-list table\">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Numerogrupo</th>
-                <th>Actions</th>
+                <th>Numero de Grupo</th>
+                <th>acciones-tb</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 15
+        // line 14
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 16
+            // line 15
             echo "            <tr>
-                <td><a href=\"";
-            // line 17
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
-            echo "</a></td>
                 <td>";
-            // line 18
+            // line 16
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "numerogrupo", array()), "html", null, true);
             echo "</td>
                 <td>
-                <ul>
-                    <li>
+                <ul class=\"acciones-tb\">
+                    <li class=\"list-tb\">
                         <a href=\"";
-            // line 22
+            // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
+            echo "\">
+                            <button class=\"btn btn-default\">Ver</button>
+                        </a>
                     </li>
-                    <li>
+                    <li class=\"list-tb\">
                         <a href=\"";
             // line 25
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
+            echo "\">
+                            <button class=\"btn btn-default\">Editar</button>
+                        </a>
                     </li>
                 </ul>
                 </td>
@@ -78,17 +75,17 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 33
         echo "        </tbody>
     </table>
 
         <ul>
-        <li>
+        <li class=\"list-tb\">
             <a href=\"";
-        // line 36
+        // line 38
         echo $this->env->getExtension('routing')->getPath("grupo_new");
         echo "\">
-                Create a new entry
+                <button class=\"button-new btn btn-primary\">Crear nuevo Grupo</button>
             </a>
         </li>
     </ul>
@@ -107,6 +104,6 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
 
     public function getDebugInfo()
     {
-        return array (  89 => 36,  82 => 31,  70 => 25,  64 => 22,  57 => 18,  51 => 17,  48 => 16,  44 => 15,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  86 => 38,  79 => 33,  65 => 25,  57 => 20,  50 => 16,  47 => 15,  43 => 14,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

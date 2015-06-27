@@ -36,12 +36,12 @@ class __TwigTemplate_c0b5423648eca49b50e83c7f5728b19d6a86286163b81513c2289a93055
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("usuario");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver lista Usuarios</button>
         </a>
     </li>
 </ul>

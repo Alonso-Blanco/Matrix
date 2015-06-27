@@ -28,9 +28,9 @@ class __TwigTemplate_c678532dd078c7fcff4dc91133849ff4c91ad7d529e46aa9d80965ceda7
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>EstudianteGrupo</h1>
+        echo "<h1 class=\"header-list\">Estudiante</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table-list table record_properties\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -50,20 +50,20 @@ class __TwigTemplate_c678532dd078c7fcff4dc91133849ff4c91ad7d529e46aa9d80965ceda7
     </table>
 
         <ul class=\"record_actions\">
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 21
         echo $this->env->getExtension('routing')->getPath("estudiantegrupo");
         echo "\">
-            Back to the list
+            <button class=\"button-new btn btn-primary\">Volver a los Estudiante</button>
         </a>
     </li>
-    <li>
+    <li class=\"list-tb\">
         <a href=\"";
         // line 26
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("estudiantegrupo_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()))), "html", null, true);
         echo "\">
-            Edit
+            <button class=\"button-new btn btn-primary\">Editar</button>
         </a>
     </li>
     <li>";

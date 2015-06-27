@@ -276,4 +276,15 @@ class Curso extends \Matrix\Bundle\Entity\Curso implements \Doctrine\ORM\Proxy\P
         return parent::getCarrera();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

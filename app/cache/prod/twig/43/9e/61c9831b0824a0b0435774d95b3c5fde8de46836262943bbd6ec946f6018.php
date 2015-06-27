@@ -46,7 +46,7 @@ class __TwigTemplate_439e61c9831b0824a0b0435774d95b3c5fde8de46836262943bbd6ec946
     <li>
         <a href=\"";
         // line 17
-        echo $this->env->getExtension('routing')->getPath("cursorequisito");
+        echo $this->env->getExtension('routing')->getPath("cursoRequisito");
         echo "\">
             Back to the list
         </a>

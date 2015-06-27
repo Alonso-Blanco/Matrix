@@ -254,4 +254,15 @@ class Grupo extends \Matrix\Bundle\Entity\Grupo implements \Doctrine\ORM\Proxy\P
         return parent::getProfesor();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }
