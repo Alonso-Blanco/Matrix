@@ -34,7 +34,7 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
         <thead>
             <tr>
                 <th>Numero de Grupo</th>
-                <th>acciones-tb</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>

@@ -28,7 +28,7 @@ class __TwigTemplate_d100c9bda440841208333d0d1e9ae9352f3c47d9eba446d411c54e8fdbd
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1 class=\"header-list\">EstudianteGrupo edit</h1>
+        echo "<h1 class=\"header-list\">Asignar Nota</h1>
 
     ";
         // line 6

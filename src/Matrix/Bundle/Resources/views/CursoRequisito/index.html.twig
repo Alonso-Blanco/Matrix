@@ -3,7 +3,7 @@
 {% block body -%}
     <h1>Cursos-Requisitos</h1>
 
-    <table class="records_list">
+    <table class="table-list table">
         <thead>
             <tr>
                 <th>Curso</th>
@@ -15,14 +15,22 @@
             <tr>
                 <td><a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>
-                <ul>
+                    <ul class="acciones-tb">
+                    <li class="list-tb">
+                        <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
+                    </li>
+                    <li class="list-tb">
+                        <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
+                    </li>
+                </ul>
+<!--                 <ul>
                     <li>
                         <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">Mostrar</a>
                     </li>
                     <li>
                         <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
-                </ul>
+                </ul> -->
                 </td>
             </tr>
         {% endfor %}

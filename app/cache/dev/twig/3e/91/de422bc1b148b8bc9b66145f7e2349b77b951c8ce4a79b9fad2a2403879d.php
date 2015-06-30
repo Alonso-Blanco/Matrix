@@ -37,13 +37,17 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
         // line 5
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/matrix/css/form.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\" />
+    <link href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/matrix/css/styles.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\" />
 ";
     }
 
-    // line 8
+    // line 9
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 9
+        // line 10
         echo "\t\t";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -51,11 +55,11 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
 ";
     }
 
-    // line 13
+    // line 14
     public function block_body($context, array $blocks = array())
     {
-        // line 14
-        echo "<h1>Cursos Aprobados</h1> 
+        // line 15
+        echo "<h1 class=\"header-list\">Cursos Aprobados</h1> 
     <div class=\"col-md-4 text-center\">
     <table class=\"records_list  table table-striped\">
         <thead>
@@ -67,22 +71,22 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
         </thead>
         <tbody>
         ";
-        // line 25
+        // line 26
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["reporte"]) ? $context["reporte"] : $this->getContext($context, "reporte")));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 26
+            // line 27
             echo "            <tr>
                 <td>";
-            // line 27
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute($context["e"], "nombreCurso", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 28
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["e"], "sigla", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 29
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["e"], "nota", array()), "html", null, true);
             echo "</td>               
 
@@ -92,7 +96,7 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 34
         echo "        </tbody>
     </table>
     </div>
@@ -113,6 +117,6 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
 
     public function getDebugInfo()
     {
-        return array (  96 => 33,  86 => 29,  82 => 28,  78 => 27,  75 => 26,  71 => 25,  58 => 14,  55 => 13,  47 => 9,  44 => 8,  38 => 5,  33 => 4,  30 => 3,  11 => 1,);
+        return array (  100 => 34,  90 => 30,  86 => 29,  82 => 28,  79 => 27,  75 => 26,  62 => 15,  59 => 14,  51 => 10,  48 => 9,  42 => 6,  38 => 5,  33 => 4,  30 => 3,  11 => 1,);
     }
 }

@@ -1,28 +1,32 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Curso-Correquisito</h1>
-
-    <table class="record_properties">
+     <h1 class="header-list">Curso-Correquisito</h1>
+<table class="table-list table record_properties">
+        <thead>
+            <tr>                
+                <th>Curso</th>                             
+            </tr>
+        </thead>
         <tbody>
-            <tr>
-                <th>Curso</th>
-                <td>{{ entity.id }}</td>
+            <tr>                       
+                <td>{{ entity.id }}</td>       
             </tr>
         </tbody>
-    </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cursoCorequisito') }}">
-           Volver a la lista
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}">
-            Editar
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+     </table>
+
+<ul class="record_actions">
+        <li class="list-tb">
+            <a href="{{ path('cursoCorequisito') }}"><button class="button-new btn btn-primary">Volver a la lista </button></a>
+        </li>
+        <li class="list-tb">
+            <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}"<button class="button-new btn btn-primary">Editar</button></a>
+        </li>
+        
+        {{form(delete_form)}}
+
+    </ul>
+
+
 {% endblock %}

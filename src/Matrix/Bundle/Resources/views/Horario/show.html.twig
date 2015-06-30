@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Horario</h1>
+   <h1 class="header-list">Horario</h1>
 
-    <table class="record_properties">
+    <table class="table-list table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -14,27 +14,27 @@
                 <td>{{ entity.dia }}</td>
             </tr>
             <tr>
-                <th>Horainicio</th>
+                <th>Hora de Inicio</th>
                 <td>{{ entity.horainicio|date("H:i") }}</td>
             </tr>
             <tr>
-                <th>Horafin</th>
+                <th>Hora de Fin</th>
                 <td>{{ entity.horafin|date("H:i") }}</td>
             </tr>
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('horario') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('horario_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+ <ul>
+        <li class="list-tb">
+            <a href="{{ path('horario') }}">
+                <button class="button-new btn btn-primary">Volver a la lista</button>
+            </a>
+        </li>
+        <li class="list-tb">
+                        <a href="{{ path('horario_edit', { 'id': entity.id }) }}">
+                            <button class="btn btn-default">Editar</button>
+                        </a>
+                    </li>
+       </ul>
+
 {% endblock %}

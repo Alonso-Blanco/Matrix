@@ -3,6 +3,7 @@
 {% block stylesheets %}
     {{ parent() }}
     <link href="{{ asset('bundles/matrix/css/form.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/matrix/css/styles.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block javascripts %}
@@ -11,7 +12,7 @@
 {% endblock %}
 
 {% block body -%}
-    <h1>Cursos Aprobados</h1> 
+     <h1 class="header-list">Cursos Aprobados</h1> 
     <div class="col-md-4 text-center">
     <table class="records_list  table table-striped">
         <thead>

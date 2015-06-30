@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Curso-Corrrequisito</h1>
+    <h1 class="header-list">Curso-Correquisito</h1>
 
-    <table class="records_list">
+    <table class="table-list table">
         <thead>
             <tr>
                 <th>Curso</th>
@@ -16,11 +16,11 @@
                 <td><a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}">Mostrar</a>
+                    <li class="list-tb">
+                        <a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
                     </li>
-                    <li>
-                        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}">Editar</a>
+                    <li class="list-tb">
+                        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
                     </li>
                 </ul>
                 </td>
@@ -29,11 +29,9 @@
         </tbody>
     </table>
 
-        <ul>
-        <li>
-            <a href="{{ path('cursoCorequisito_new') }}">
-                Crear un nuevo correquisito
-            </a>
+<ul>
+        <li class="list-tb">
+            <a href="{{ path('curso_new') }}"><button class="button-new btn btn-primary">Crear nuevo Curso</button></a>
         </li>
     </ul>
     {% endblock %}

@@ -39,12 +39,38 @@
                             <li><a href="{{path('horario')}}">Horarios</a></li> 
                         {%  endif %}
                         {% if (app.session.get('login').rol == 'Profesor' )   %} 
-                            <li><a href="{{path('estudiantegrupo_asignarnorasgrupo')}}">Grupos, Estudiantes y Notas</a></li>
+                            <li>
+                                <a href="{{path('estudiantegrupo_asignarnorasgrupo')}}">Grupos, Estudiantes y Notas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('app_dev.php/carrera/cursos')}}">Maya Curricular</a>
+                            </li>
+
                         {%  endif %}
                         {% if (app.session.get('login').rol == 'Estudiante' )   %} 
                             <li><a href="{{asset('app_dev.php/estudianteGrupo/matriculaCurso')}}">Matricular</a></li>
+                        <!-- div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="caret"></span>
+                                        Mis cursos
+                             </button> -->
+                            <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li>
+                                <a href="{{asset('app_dev.php/curso/historial')}}">Historial Academico</a>
+                              </li>
+                              <li>
+                                <a href="{{asset('app_dev.php/curso/cursosAprobados')}}">Cursos Aprobados</a>
+                              </li>
+                              <li>
+                                <a href="{{asset('app_dev.php/carrera/cursos')}}">Maya Curricular</a>
+                            </li>
+                            </ul>
+                          </div> -->
+                       
                             <li><a href="{{asset('app_dev.php/curso/historial')}}">Historial Académico</a></li>
                             <li><a href="{{asset('app_dev.php/curso/cursosAprobados')}}">Cursos aprobados</a></li>
+                            <li><a href="{{asset('app_dev.php/carrera/cursos')}}">Maya Curricular</a></li>
                         {%  endif %}
                         <li id="logout-nav"><a href="{{path('usuario_logout')}}">Cerrar Sesión</a></li>
                      </a>

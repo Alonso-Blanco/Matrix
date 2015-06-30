@@ -28,9 +28,9 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Horario</h1>
+        echo "<h1 class=\"header-list\">Horario</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table-list table\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -47,14 +47,14 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
         echo "</td>
             </tr>
             <tr>
-                <th>Horainicio</th>
+                <th>Hora de Inicio</th>
                 <td>";
         // line 18
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "horainicio", array()), "H:i"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
-                <th>Horafin</th>
+                <th>Hora de Fin</th>
                 <td>";
         // line 22
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "horafin", array()), "H:i"), "html", null, true);
@@ -63,28 +63,25 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
         </tbody>
     </table>
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+ <ul>
+        <li class=\"list-tb\">
+            <a href=\"";
         // line 29
         echo $this->env->getExtension('routing')->getPath("horario");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
+                <button class=\"button-new btn btn-primary\">Volver a la lista</button>
+            </a>
+        </li>
+        <li class=\"list-tb\">
+                        <a href=\"";
         // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("horario_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
-            Edit
-        </a>
-    </li>
-    <li>";
-        // line 38
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
-        echo "</li>
-</ul>
+                            <button class=\"btn btn-default\">Editar</button>
+                        </a>
+                    </li>
+       </ul>
+
 ";
     }
 
@@ -100,6 +97,6 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
 
     public function getDebugInfo()
     {
-        return array (  85 => 38,  78 => 34,  70 => 29,  60 => 22,  53 => 18,  46 => 14,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  78 => 34,  70 => 29,  60 => 22,  53 => 18,  46 => 14,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

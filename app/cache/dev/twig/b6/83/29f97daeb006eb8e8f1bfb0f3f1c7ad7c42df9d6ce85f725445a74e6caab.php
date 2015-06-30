@@ -30,7 +30,7 @@ class __TwigTemplate_b68329f97daeb006eb8e8f1bfb0f3f1c7ad7c42df9d6ce85f725445a74e
         // line 4
         echo "<h1>Cursos-Requisitos</h1>
 
-    <table class=\"records_list\">
+    <table class=\"table-list table\">
         <thead>
             <tr>
                 <th>Curso</th>
@@ -52,20 +52,34 @@ class __TwigTemplate_b68329f97daeb006eb8e8f1bfb0f3f1c7ad7c42df9d6ce85f725445a74e
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
             echo "</a></td>
                 <td>
-                <ul>
-                    <li>
+                    <ul class=\"acciones-tb\">
+                    <li class=\"list-tb\">
                         <a href=\"";
             // line 20
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoRequisito_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
+            echo "\"><button class=\"btn btn-default\">Ver</button></a>
+                    </li>
+                    <li class=\"list-tb\">
+                        <a href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoRequisito_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
+            echo "\"><button class=\"btn btn-default\">Editar</button></a>
+                    </li>
+                </ul>
+<!--                 <ul>
+                    <li>
+                        <a href=\"";
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoRequisito_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">Mostrar</a>
                     </li>
                     <li>
                         <a href=\"";
-            // line 23
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoRequisito_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">Editar</a>
                     </li>
-                </ul>
+                </ul> -->
                 </td>
             </tr>
         ";
@@ -73,14 +87,14 @@ class __TwigTemplate_b68329f97daeb006eb8e8f1bfb0f3f1c7ad7c42df9d6ce85f725445a74e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 37
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 34
+        // line 42
         echo $this->env->getExtension('routing')->getPath("cursoRequisito_new");
         echo "\">
                <button class=\"button-new btn btn-primary\">Crear nuevo Requisito</button>
@@ -102,6 +116,6 @@ class __TwigTemplate_b68329f97daeb006eb8e8f1bfb0f3f1c7ad7c42df9d6ce85f725445a74e
 
     public function getDebugInfo()
     {
-        return array (  84 => 34,  77 => 29,  65 => 23,  59 => 20,  50 => 16,  47 => 15,  43 => 14,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  98 => 42,  91 => 37,  79 => 31,  73 => 28,  65 => 23,  59 => 20,  50 => 16,  47 => 15,  43 => 14,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

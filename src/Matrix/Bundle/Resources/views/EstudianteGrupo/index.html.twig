@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1 class="header-list">EstudianteGrupo</h1>
+    <h1 class="header-list">Notas</h1>
 
     <table class="table-list table records_list">
         <thead>
@@ -29,11 +29,12 @@
         </tbody>
     </table>
 
-        <ul>
-        <li>
-            <a href="{{ path('estudiantegrupo_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+<ul class="record_actions">
+    <li class="list-tb">
+        <a href="{{ path('estudiantegrupo_new') }}">
+            <button class="button-new btn btn-primary">Volver a la lista</button>
+        </a>
+    </li>
+</ul>
+
     {% endblock %}

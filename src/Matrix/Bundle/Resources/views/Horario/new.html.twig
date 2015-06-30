@@ -1,15 +1,17 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Horario creation</h1>
+     <h1 class="header-list">Nuevo Horario</h1>
 
     {{ form(form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('horario') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+
+       <ul>
+        <li class="list-tb">
+            <a href=href="{{ path('horario') }}">
+                <button class="button-new btn btn-primary">Volver a la lista</button>
+            </a>
+        </li>
+       </ul>
+
 {% endblock %}

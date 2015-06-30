@@ -28,9 +28,9 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Curso-Corrrequisito</h1>
+        echo "<h1 class=\"header-list\">Curso-Correquisito</h1>
 
-    <table class=\"records_list\">
+    <table class=\"table-list table\">
         <thead>
             <tr>
                 <th>Curso</th>
@@ -53,17 +53,17 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
             echo "</a></td>
                 <td>
                 <ul>
-                    <li>
+                    <li class=\"list-tb\">
                         <a href=\"";
             // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoCorequisito_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">Mostrar</a>
+            echo "\"><button class=\"btn btn-default\">Ver</button></a>
                     </li>
-                    <li>
+                    <li class=\"list-tb\">
                         <a href=\"";
             // line 23
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoCorequisito_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">Editar</a>
+            echo "\"><button class=\"btn btn-default\">Editar</button></a>
                     </li>
                 </ul>
                 </td>
@@ -77,14 +77,12 @@ class __TwigTemplate_b2238e1ec52ba48a69e52ae5e2afdecda817c3d62b6df652f250ae03c86
         echo "        </tbody>
     </table>
 
-        <ul>
-        <li>
+<ul>
+        <li class=\"list-tb\">
             <a href=\"";
         // line 34
-        echo $this->env->getExtension('routing')->getPath("cursoCorequisito_new");
-        echo "\">
-                Crear un nuevo correquisito
-            </a>
+        echo $this->env->getExtension('routing')->getPath("curso_new");
+        echo "\"><button class=\"button-new btn btn-primary\">Crear nuevo Curso</button></a>
         </li>
     </ul>
     ";

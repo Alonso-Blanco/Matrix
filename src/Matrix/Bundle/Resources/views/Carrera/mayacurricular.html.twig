@@ -1,18 +1,20 @@
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/matrix/css/form.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/matrix/css/styles.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+        {{ parent() }}
+   
+{% endblock %}
+
 {% block body -%}
 
-<h1>Maya Curricular de la Carrera {{ carrera.nombreCarrera }}</h1>
-
-<p>
-    Cursos
-    {% for c in cursos %}
-        {{ c }}
-    {% endfor %}
-</p>
-
-
-<table>
+ <h1 class="header-list">Maya Curricular de la Carrera: {{ carrera.nombreCarrera }}</h1>
+     <table class="records_list  table table-striped">
     <thead>
         <tr>
             <th>Curso</th>

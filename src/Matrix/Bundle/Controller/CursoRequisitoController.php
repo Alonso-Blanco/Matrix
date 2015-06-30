@@ -225,7 +225,7 @@ class CursoRequisitoController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('cursorequisito'));
+        return $this->redirect($this->generateUrl('cursoRequisito'));
     }
 
     /**
