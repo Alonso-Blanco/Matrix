@@ -32,11 +32,12 @@
                         {% if (app.session.get('login').rol == 'Administrador' )   %}    
                             <li><a href="{{path('usuario')}}">Usuarios</a></li>                      
                             <li><a href="{{path('curso')}}">Cursos</a></li>
-                            <li><a href="{{path('cursoRequisito')}}">Requisitos de Cursos</a></li>
-                            <li><a href="{{path('cursoCorequisito')}}">Correquisitos de Cursos</a></li>
+                            <li><a href="{{path('cursoRequisito')}}">Requisitos-Cursos</a></li>
+                            <li><a href="{{path('cursoCorequisito')}}">Correquisitos-Cursos</a></li>
                             <li><a href="{{path('carrera')}}">Carreras</a></li>
                             <li><a href="{{path('grupo')}}">Grupos</a></li> 
                             <li><a href="{{path('horario')}}">Horarios</a></li> 
+                            <li><a href="{{asset('app_dev.php/horarioGrupo')}}">Horarios-Grupos</a></li> 
                         {%  endif %}
                         {% if (app.session.get('login').rol == 'Profesor' )   %} 
                             <li>
