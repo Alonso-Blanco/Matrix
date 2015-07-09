@@ -62,7 +62,7 @@ class __TwigTemplate_dece4afae37da91f53fa9425bcd25ae0ceeafa302e50064990094cb9f9e
         echo "<h1 class=\"header-list\">Maya Curricular de la Carrera: ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["carrera"]) ? $context["carrera"] : $this->getContext($context, "carrera")), "nombreCarrera", array()), "html", null, true);
         echo "</h1>
-     <table class=\"records_list  table table-striped\">
+     <table class=\"records_list tabla-maya table table-striped\">
     <thead>
         <tr>
             <th>Curso</th>
@@ -144,8 +144,6 @@ class __TwigTemplate_dece4afae37da91f53fa9425bcd25ae0ceeafa302e50064990094cb9f9e
         // line 49
         echo "    </tbody>
 </table>
-
-
 
 ";
     }

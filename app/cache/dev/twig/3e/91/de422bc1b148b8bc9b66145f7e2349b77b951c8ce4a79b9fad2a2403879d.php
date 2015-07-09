@@ -60,8 +60,8 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
     {
         // line 15
         echo "<h1 class=\"header-list\">Cursos Aprobados</h1> 
-    <div class=\"col-md-4 text-center\">
-    <table class=\"records_list  table table-striped\">
+    <div class=\"col-md-4 text-center col-md-offset-3\">
+    <table class=\"records_list table table-striped\">
         <thead>
             <tr>
                 <th>Nombre curso</th>

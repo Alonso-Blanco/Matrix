@@ -28,50 +28,63 @@ class __TwigTemplate_6d09ed83299f4145b3986c762615e5c43d6a4db6ff40966b8341b9284c7
     public function block_body($context, array $blocks = array())
     {
         // line 5
-        echo "<h2>Grupos del Curso ";
+        echo "<h1 class=\"header-list\">Grupos del Curso ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["curso"]) ? $context["curso"] : $this->getContext($context, "curso")), "nombreCurso", array()), "html", null, true);
-        echo "</h2>
+        echo "</h1>
+
+    <div class=\"list-group\">
     ";
-        // line 6
+        // line 8
         $context["grupo"] =  -1;
-        // line 7
+        // line 9
         echo "    ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 8
+            // line 10
             echo "        ";
             if (((isset($context["grupo"]) ? $context["grupo"] : $this->getContext($context, "grupo")) != $this->getAttribute($context["e"], "numerogrupo", array()))) {
-                // line 9
-                echo "            <a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("estudiantegrupo_matricula", array("id" => $this->getAttribute($context["e"], "id", array()))), "html", null, true);
-                echo "\">
-                <h3>Grupo Número: ";
-                // line 10
+                // line 11
+                echo "        </ul>
+        <hr class=\"separador\">
+            <div class=\"fila\">
+                <a href=\"#\" class=\"list-group-item activable info\">
+                  <p class=\"titulo-grupo\">Grupo Número: ";
+                // line 15
                 echo twig_escape_filter($this->env, $this->getAttribute($context["e"], "numerogrupo", array()), "html", null, true);
-                echo "</h3>
-            </a>
+                echo "</p>
+                </a>
+                <a href=\"";
+                // line 17
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("estudiantegrupo_matricula", array("id" => $this->getAttribute($context["e"], "id", array()))), "html", null, true);
+                echo "\" class=\"opciones\">
+                  <button class=\"list-group-item btn btn-custom\">
+                    Matricular
+                  </button>
+                </a>
+            </div>
+            <h4 class=\"titulo-horario-grupo\">Horario</h4>
+            <ul class=\"list-group\">
             ";
-                // line 12
+                // line 25
                 $context["grupo"] = $this->getAttribute($context["e"], "numerogrupo", array());
-                // line 13
+                // line 26
                 echo "        ";
             }
-            // line 14
-            echo "
-        <p>
-            ";
-            // line 16
+            // line 27
+            echo "            <li class=\"list-group-item\">
+                ";
+            // line 28
             echo twig_escape_filter($this->env, (((($this->getAttribute($context["e"], "dia", array()) . " desde ") . twig_date_format_filter($this->env, $this->getAttribute($context["e"], "horainicio", array()), "H:i")) . " hasta ") . twig_date_format_filter($this->env, $this->getAttribute($context["e"], "horafin", array()), "H:i")), "html", null, true);
             echo "
-        </p>
+            </li>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        echo "</table>
+        // line 31
+        echo "    <hr class=\"separador\">
 ";
     }
 
@@ -87,6 +100,6 @@ class __TwigTemplate_6d09ed83299f4145b3986c762615e5c43d6a4db6ff40966b8341b9284c7
 
     public function getDebugInfo()
     {
-        return array (  74 => 19,  65 => 16,  61 => 14,  58 => 13,  56 => 12,  51 => 10,  46 => 9,  43 => 8,  38 => 7,  36 => 6,  31 => 5,  28 => 3,  11 => 1,);
+        return array (  87 => 31,  78 => 28,  75 => 27,  72 => 26,  70 => 25,  59 => 17,  54 => 15,  48 => 11,  45 => 10,  40 => 9,  38 => 8,  31 => 5,  28 => 3,  11 => 1,);
     }
 }

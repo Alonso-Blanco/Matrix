@@ -121,3 +121,30 @@
 .opciones-horarios {
 	margin-left: 15%;
 }
+
+.centrado {
+	margin: 0 auto !important;
+}
+
+.titulo-horario-grupo {
+	margin-top: 30px !important;
+	margin-left: 5%;
+}
+
+.separador {
+	width: 100%;
+	color: black;
+	border-style: inset;
+    border-width: 1px;
+}
+
+.titulo-grupo {
+	font-size: 20px;
+	font-family: inherit;
+	font-weight: 500;
+}
+
+.tabla-maya {
+	width: 65% !important;
+	margin: 0 auto;
+}

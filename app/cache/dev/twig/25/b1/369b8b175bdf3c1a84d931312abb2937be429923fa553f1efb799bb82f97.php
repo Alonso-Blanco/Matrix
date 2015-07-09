@@ -60,7 +60,7 @@ class __TwigTemplate_25b1369b8b175bdf3c1a84d931312abb2937be429923fa553f1efb799bb
     {
         // line 15
         echo "<h1 class=\"header-list\">Historial de cursos matriculados</h1> 
-    <div class=\"col-md-4 text-center\">
+    <div class=\"col-md-4 text-center col-md-offset-3\">
     <table class=\"records_list  table table-striped\">
         <thead>
             <tr>

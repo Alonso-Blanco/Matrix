@@ -2,19 +2,31 @@
 
 {% block body -%}
 
-<h2>Grupos del Curso {{ curso.nombreCurso }}</h2>
+<h1 class="header-list">Grupos del Curso {{ curso.nombreCurso }}</h1>
+
+    <div class="list-group">
     {% set grupo = -1 %}
     {% for e in entity %}
         {% if grupo != e.numerogrupo %}
-            <a href="{{ path('estudiantegrupo_matricula', { 'id': e.id }) }}">
-                <h3>Grupo Número: {{ e.numerogrupo }}</h3>
-            </a>
+        </ul>
+        <hr class="separador">
+            <div class="fila">
+                <a href="#" class="list-group-item activable info">
+                  <p class="titulo-grupo">Grupo Número: {{ e.numerogrupo }}</p>
+                </a>
+                <a href="{{ path('estudiantegrupo_matricula', { 'id': e.id }) }}" class="opciones">
+                  <button class="list-group-item btn btn-custom">
+                    Matricular
+                  </button>
+                </a>
+            </div>
+            <h4 class="titulo-horario-grupo">Horario</h4>
+            <ul class="list-group">
             {% set grupo = e.numerogrupo %}
         {% endif %}
-
-        <p>
-            {{ e.dia ~ ' desde ' ~ e.horainicio|date("H:i") ~ ' hasta ' ~ e.horafin|date("H:i") }}
-        </p>
+            <li class="list-group-item">
+                {{ e.dia ~ ' desde ' ~ e.horainicio|date("H:i") ~ ' hasta ' ~ e.horafin|date("H:i") }}
+            </li>
     {% endfor %}
-</table>
+    <hr class="separador">
 {% endblock %}

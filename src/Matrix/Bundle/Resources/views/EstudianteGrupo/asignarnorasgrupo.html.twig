@@ -1,12 +1,20 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+    <h1 class="header-list">Administrar Grupos</h1>
 
-    {% for e in entity %}
-            <a href="{{ path('estudiantegrupo_asignarnoras', { 'id': e.id }) }}">
-                <h3>Grupo: {{ e }}</h3>
+    <div class="list-group">
+    {% for entity in entity %}
+        <div class="fila">
+            <a href="#" class="list-group-item activable info">
+              Grupo: {{ entity }}
             </a>
-
+            <a href="{{ path('estudiantegrupo_asignarnoras', { 'id': entity.id }) }}" class="opciones">
+              <button class="list-group-item btn btn-custom">
+                Gestionar Notas
+              </button>
+            </a>
+        </div>
     {% endfor %}
 
 </table>
