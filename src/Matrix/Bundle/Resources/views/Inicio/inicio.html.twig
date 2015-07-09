@@ -1,14 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body -%}
-
 	{% if (app.session.get('login').usuario == '' )   %}
-
 	{%  else %}
-	<!--
-		<h1>Bienvenida(o) {{app.session.get('login').id }} {{app.session.get('login').usuario }}</h1>
-		<p>Eres un usuario: {{app.session.get('login').rol}}</p> 
-	-->
-	
+		<h1 class="header-list">Bienvenida(o) {{app.session.get('login').usuario }}</h1>
+		<h3 class="header-list">Tu rol en el sistema es el de: {{app.session.get('login').rol}}</h3> 
 	{%  endif %}
 {% endblock %}	
