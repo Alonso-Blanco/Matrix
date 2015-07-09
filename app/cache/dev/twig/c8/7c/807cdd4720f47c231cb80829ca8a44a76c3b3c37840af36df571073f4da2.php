@@ -30,7 +30,7 @@ class __TwigTemplate_c87c807cdd4720f47c231cb80829ca8a44a76c3b3c37840af36df571073
         // line 4
         echo "<h1 class=\"header-list\">Carrera</h1>
 
-    <table class=\"table-list table record_properties\">
+    <table class=\"table-list table record_properties tabla-carreras\">
         <thead>
             <th>Código de Carrera</th>
             <th>Nombre de Carrera</th>
@@ -47,7 +47,7 @@ class __TwigTemplate_c87c807cdd4720f47c231cb80829ca8a44a76c3b3c37840af36df571073
         </tbody>
     </table>
 
-        <ul class=\"record_actions\">
+    <ul class=\"record_actions opciones-carreras\">
     <li class=\"list-tb\">
         <a href=\"";
         // line 19

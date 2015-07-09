@@ -3,7 +3,7 @@
 {% block body -%}
    <h1 class="header-list">Horarios</h1>
 
-    <table class="table-list table">
+    <table class="table-list table tabla-horarios">
         <thead>
             <tr>
                 <th>Id</th>
@@ -20,7 +20,7 @@
                 <td>{{ entity.dia }}</td>
                 <td>{{ entity.horainicio|date("H:i") }}</td>
                 <td>{{ entity.horafin|date("H:i") }}</td>
-                <td>
+                <td class="ancho-botones">
                 <ul class="acciones-tb">
                     <li class="list-tb">
                         <a href="{{ path('horario_show', { 'id': entity.id }) }}">
@@ -41,7 +41,7 @@
     </table>
 
          <ul>
-        <li class="list-tb">
+        <li class="list-tb opciones-horarios">
             <a href="{{ path('horario_new') }}">
                 <button class="button-new btn btn-primary">Crear nuevo Horario</button>
             </a>

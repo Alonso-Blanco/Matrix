@@ -1,47 +1,25 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Cursos-Requisitos</h1>
+    <h1 class="header-list">Requisitos de los Cursos</h1>
 
-    <table class="table-list table">
-        <thead>
-            <tr>
-                <th>Curso</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>
-                    <ul class="acciones-tb">
-                    <li class="list-tb">
-                        <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
-                    </li>
-                    <li class="list-tb">
-                        <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
-                    </li>
-                </ul>
-<!--                 <ul>
-                    <li>
-                        <a href="{{ path('cursoRequisito_show', { 'id': entity.id }) }}">Mostrar</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}">Editar</a>
-                    </li>
-                </ul> -->
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('cursoRequisito_new') }}">
-               <button class="button-new btn btn-primary">Crear nuevo Requisito</button>
+    <div class="list-group">
+    {% for entity in entities %}
+        <div class="fila">
+            <a href="#" class="list-group-item activable info">
+              {{ entity.curso ~ ' - ' ~ entity.requisito }}
             </a>
+            <a href="{{ path('cursoRequisito_edit', { 'id': entity.id }) }}" class="opciones">
+              <button class="list-group-item btn btn-custom">
+                Editar
+              </button>
+            </a>
+        </div>
+    {% endfor %}
+    <ul>
+        <li class="list-tb">
+            <a href="{{ path('cursoRequisito_new') }}"><button class="button-new btn btn-primary">Crear nuevo Requisito</button></a>
         </li>
     </ul>
-    {% endblock %}
+    </div>
+{% endblock %}

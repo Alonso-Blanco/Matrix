@@ -35,11 +35,10 @@ class __TwigTemplate_c3b0f0a11b95a5a053d42c32790093f0fc4aa760c1e9aa745dd4e3229d6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 
-
        <ul>
         <li class=\"list-tb\">
-            <a href=href=\"";
-        // line 11
+            <a href=\"";
+        // line 10
         echo $this->env->getExtension('routing')->getPath("horario");
         echo "\">
                 <button class=\"button-new btn btn-primary\">Volver a la lista</button>
@@ -62,6 +61,6 @@ class __TwigTemplate_c3b0f0a11b95a5a053d42c32790093f0fc4aa760c1e9aa745dd4e3229d6
 
     public function getDebugInfo()
     {
-        return array (  43 => 11,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

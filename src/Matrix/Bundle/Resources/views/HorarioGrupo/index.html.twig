@@ -1,26 +1,33 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>HorarioGrupo list</h1>
+    <h1 class="header-list">Lista de Horarios de Grupos</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Actions</th>
+    <table class="table-list table">
+        <thead> 
+            <tr>                
+                <th>Grupo</th>
+                <th>Nombre del Curso</th>
+                <th>Día</th>
+                <th>Hora de Inicio</th>
+                <th>Hora de Fin</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('horariogrupo_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.grupo.numerogrupo }}</td>
+                <td>{{ entity.grupo.curso.nombreCurso }}</td>
+                <td>{{ entity.horario.dia }}</td>
+                <td>{{ entity.horario.horaInicio|date("H:i") }}</td>
+                <td>{{ entity.horario.horaFin|date("H:i") }}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('horariogrupo_show', { 'id': entity.id }) }}">show</a>
+                <ul class="acciones-tb">
+                    <li class="list-tb">
+                        <a href="{{ path('horariogrupo_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
                     </li>
-                    <li>
-                        <a href="{{ path('horariogrupo_edit', { 'id': entity.id }) }}">edit</a>
+                    <li class="list-tb">
+                        <a href="{{ path('horariogrupo_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
                     </li>
                 </ul>
                 </td>
@@ -30,10 +37,8 @@
     </table>
 
         <ul>
-        <li>
-            <a href="{{ path('horariogrupo_new') }}">
-                Create a new entry
-            </a>
+        <li class="list-tb">
+            <a href="{{ path('horariogrupo_new') }}"><button class="button-new btn btn-primary">Asignar Horario a un Grupo</button></a>
         </li>
     </ul>
     {% endblock %}

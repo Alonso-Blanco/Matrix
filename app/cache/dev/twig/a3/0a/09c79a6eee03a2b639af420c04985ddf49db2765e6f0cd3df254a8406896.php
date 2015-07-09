@@ -30,7 +30,7 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
         // line 4
         echo "<h1 class=\"header-list\">Horario</h1>
 
-    <table class=\"table-list table\">
+    <table class=\"table-list table tabla-horario\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -40,7 +40,7 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
         echo "</td>
             </tr>
             <tr>
-                <th>Dia</th>
+                <th>Día</th>
                 <td>";
         // line 14
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "dia", array()), "html", null, true);
@@ -63,8 +63,8 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
         </tbody>
     </table>
 
- <ul>
-        <li class=\"list-tb\">
+    <ul>
+        <li class=\"list-tb opciones-horario\">
             <a href=\"";
         // line 29
         echo $this->env->getExtension('routing')->getPath("horario");
@@ -73,14 +73,14 @@ class __TwigTemplate_a30a09c79a6eee03a2b639af420c04985ddf49db2765e6f0cd3df254a84
             </a>
         </li>
         <li class=\"list-tb\">
-                        <a href=\"";
+            <a href=\"";
         // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("horario_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
-                            <button class=\"btn btn-default\">Editar</button>
-                        </a>
-                    </li>
-       </ul>
+                <button class=\"btn btn-default\">Editar</button>
+            </a>
+        </li>
+    </ul>
 
 ";
     }

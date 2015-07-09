@@ -40,7 +40,7 @@ class __TwigTemplate_439e61c9831b0824a0b0435774d95b3c5fde8de46836262943bbd6ec946
             <tr>                       
                 <td>";
         // line 14
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()), "html", null, true);
+        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "curso", array()) . " - ") . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "requisito", array())), "html", null, true);
         echo "</td>       
             </tr>
         </tbody>

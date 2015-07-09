@@ -3,27 +3,28 @@
 {% block body -%}
     <h1 class="header-list">Información del Grupo</h1>
 
-    <table class="table-list table record_properties">
+    <table class="table-list table record_properties tabla-carreras">
         <thead>
-            <th>Numero de Grupo</th>            
+            <th>Numero de Grupo</th>  
+            <th>Curso del Grupo</th>          
         </thead>
         <tbody>            
-            <td>{{ entity.numerogrupo }}</td>            
+            <td>{{ entity.numerogrupo }}</td>   
+            <td>{{ entity.curso }}</td>         
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li class="list-tb">
-        <a href="{{ path('grupo') }}">
-            <button class="button-new btn btn-primary">Volver a los Grupos</button>
-        </a>
-    </li>
-    <li  class="list-tb">
-        <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">
-            <button class="button-new btn btn-primary">Editar</button>
-
-        </a>
-    </li>
-    {{ form(delete_form) }}
-</ul>
+    <ul class="record_actions opciones-carreras">
+        <li class="list-tb">
+            <a href="{{ path('grupo') }}">
+                <button class="button-new btn btn-primary">Volver a los Grupos</button>
+            </a>
+        </li>
+        <li  class="list-tb">
+            <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">
+                <button class="button-new btn btn-primary">Editar</button>
+            </a>
+        </li>
+        {{ form(delete_form) }}
+    </ul>
 {% endblock %}

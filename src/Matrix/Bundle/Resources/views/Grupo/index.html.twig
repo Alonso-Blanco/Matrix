@@ -3,10 +3,11 @@
 {% block body -%}
     <h1 class="header-list">Lista de Grupos</h1>
 
-    <table class="table-list table">
+    <table class="table-list table tabla-carreras">
         <thead>
             <tr>
                 <th>Numero de Grupo</th>
+                <th>Curso de Grupo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
         {% for entity in entities %}
             <tr>
                 <td>{{ entity.numerogrupo }}</td>
+                <td>{{ entity.curso }}</td>
                 <td>
                 <ul class="acciones-tb">
                     <li class="list-tb">
@@ -33,7 +35,7 @@
         </tbody>
     </table>
 
-        <ul>
+        <ul class="opciones-carreras">
         <li class="list-tb">
             <a href="{{ path('grupo_new') }}">
                 <button class="button-new btn btn-primary">Crear nuevo Grupo</button>

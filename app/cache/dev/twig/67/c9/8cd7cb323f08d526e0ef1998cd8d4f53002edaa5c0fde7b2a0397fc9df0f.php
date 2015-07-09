@@ -35,16 +35,16 @@ class __TwigTemplate_67c98cd7cb323f08d526e0ef1998cd8d4f53002edaa5c0fde7b2a0397fc
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+    <ul class=\"record_actions\">
+    \t<li class=\"list-tb\">
+    \t    <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("cursoRequisito");
         echo "\">
-            Volver a la lista
-        </a>
-    </li>
-</ul>
+    \t        <button class=\"button-new btn btn-primary\">Lista de Requisitos</button>
+    \t    </a>
+    \t</li>
+\t</ul>
 ";
     }
 

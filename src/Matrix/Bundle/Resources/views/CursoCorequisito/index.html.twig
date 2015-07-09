@@ -1,37 +1,25 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1 class="header-list">Curso-Correquisito</h1>
+    <h1 class="header-list">Curso Correquisitos</h1>
 
-    <table class="table-list table">
-        <thead>
-            <tr>
-                <th>Curso</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>
-                <ul>
-                    <li class="list-tb">
-                        <a href="{{ path('cursoCorequisito_show', { 'id': entity.id }) }}"><button class="btn btn-default">Ver</button></a>
-                    </li>
-                    <li class="list-tb">
-                        <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}"><button class="btn btn-default">Editar</button></a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-<ul>
+    <div class="list-group">
+    {% for entity in entities %}
+        <div class="fila">
+            <a href="#" class="list-group-item activable info">
+              {{ entity.curso ~ ' - ' ~ entity.corequisito }}
+            </a>
+            <a href="{{ path('cursoCorequisito_edit', { 'id': entity.id }) }}" class="opciones">
+              <button class="list-group-item btn btn-custom">
+                Editar
+              </button>
+            </a>
+        </div>
+    {% endfor %}
+    <ul>
         <li class="list-tb">
-            <a href="{{ path('curso_new') }}"><button class="button-new btn btn-primary">Crear nuevo Curso</button></a>
+            <a href="{{ path('cursoCorequisito_new') }}"><button class="button-new btn btn-primary">Crear nuevo Corequisito</button></a>
         </li>
     </ul>
-    {% endblock %}
+    </div>
+{% endblock %}

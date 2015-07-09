@@ -30,30 +30,35 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
         // line 4
         echo "<h1 class=\"header-list\">Lista de Grupos</h1>
 
-    <table class=\"table-list table\">
+    <table class=\"table-list table tabla-carreras\">
         <thead>
             <tr>
                 <th>Numero de Grupo</th>
+                <th>Curso de Grupo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 14
+        // line 15
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 15
+            // line 16
             echo "            <tr>
                 <td>";
-            // line 16
+            // line 17
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "numerogrupo", array()), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 18
+            echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "curso", array()), "html", null, true);
             echo "</td>
                 <td>
                 <ul class=\"acciones-tb\">
                     <li class=\"list-tb\">
                         <a href=\"";
-            // line 20
+            // line 22
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">
                             <button class=\"btn btn-default\">Ver</button>
@@ -61,7 +66,7 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
                     </li>
                     <li class=\"list-tb\">
                         <a href=\"";
-            // line 25
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("grupo_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">
                             <button class=\"btn btn-default\">Editar</button>
@@ -75,14 +80,14 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "        </tbody>
     </table>
 
-        <ul>
+        <ul class=\"opciones-carreras\">
         <li class=\"list-tb\">
             <a href=\"";
-        // line 38
+        // line 40
         echo $this->env->getExtension('routing')->getPath("grupo_new");
         echo "\">
                 <button class=\"button-new btn btn-primary\">Crear nuevo Grupo</button>
@@ -104,6 +109,6 @@ class __TwigTemplate_b1aad68e8f0f244254b4ce2568ee0adbc9d3a9fa70a2d6d092d96f9e0ea
 
     public function getDebugInfo()
     {
-        return array (  86 => 38,  79 => 33,  65 => 25,  57 => 20,  50 => 16,  47 => 15,  43 => 14,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  91 => 40,  84 => 35,  70 => 27,  62 => 22,  55 => 18,  51 => 17,  48 => 16,  44 => 15,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

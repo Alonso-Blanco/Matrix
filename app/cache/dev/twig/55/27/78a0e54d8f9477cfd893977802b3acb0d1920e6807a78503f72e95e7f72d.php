@@ -40,7 +40,7 @@ class __TwigTemplate_552778a0e54d8f9477cfd893977802b3acb0d1920e6807a78503f72e95e
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("usuario");
-        echo "\"><button class=\"button-new btn btn-primary\">Volver a los Cursos</button></a>
+        echo "\"><button class=\"button-new btn btn-primary\">Volver a la Lista</button></a>
     </li>
     ";
         // line 12

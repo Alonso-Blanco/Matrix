@@ -41,7 +41,7 @@ class __TwigTemplate_00bb9efe11e8959c06bb55dcd17ce6f55c079ac3e5142968886db342ae0
         // line 10
         echo $this->env->getExtension('routing')->getPath("carrera");
         echo "\">
-\t            <button class=\"button-new btn btn-primary\">Volver a los Cursos</button>
+\t            <button class=\"button-new btn btn-primary\">volver a la lista</button>
 \t        </a>
 \t    </li>
 \t    ";

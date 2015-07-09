@@ -35,16 +35,16 @@ class __TwigTemplate_d5924cf3b947e1f5f184809d4b63db0876e24b8a10bda6600274b3613c7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+\t<ul>
+        <li class=\"list-tb\">
+            <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("horariogrupo");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-</ul>
+                <button class=\"button-new btn btn-primary\">Volver a la lista</button>
+            </a>
+        </li>
+    </ul>
 ";
     }
 

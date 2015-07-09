@@ -29,7 +29,7 @@ class __TwigTemplate_74c4809fd0de63db2194f7e847f09ec34982baec39df3407ec581882469
     {
         // line 4
         echo "<h1 class=\"header-list\">Curso-Correquisito</h1>
-<table class=\"table-list table record_properties\">
+    <table class=\"table-list table record_properties\">
         <thead>
             <tr>                
                 <th>Curso</th>                             
@@ -39,14 +39,14 @@ class __TwigTemplate_74c4809fd0de63db2194f7e847f09ec34982baec39df3407ec581882469
             <tr>                       
                 <td>";
         // line 13
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()), "html", null, true);
+        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "curso", array()) . " - ") . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "corequisito", array())), "html", null, true);
         echo "</td>       
             </tr>
         </tbody>
 
      </table>
 
-<ul class=\"record_actions\">
+    <ul class=\"record_actions\">
         <li class=\"list-tb\">
             <a href=\"";
         // line 21

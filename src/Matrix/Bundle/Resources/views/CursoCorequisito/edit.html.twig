@@ -1,12 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-     <h1 class="header-list">Correquisitos</h1>
+<h1 class="header-list">Correquisito</h1>
 
  <ul class="record_actions">
      {{ form(edit_form) }}
      <ul>     	
-     	 {{ form(delete_form) }}
+     	{{ form(delete_form) }}
         <li class="list-tb">
             <a href="{{ path('cursoCorequisito') }}">
                 <button class="button-new btn btn-primary">Volver a la lista </button>

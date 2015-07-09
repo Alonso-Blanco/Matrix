@@ -28,15 +28,15 @@ class __TwigTemplate_d4194c84d1fa17c42c534fbe94ef9858cabb9f3881b43916371c8f8a693
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1 class=\"header-list\">Correquisitos</h1>
+        echo "<h1 class=\"header-list\">Correquisito</h1>
 
-            <ul class=\"record_actions\">
+ <ul class=\"record_actions\">
      ";
         // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form');
         echo "
      <ul>     \t
-     \t ";
+     \t";
         // line 9
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "

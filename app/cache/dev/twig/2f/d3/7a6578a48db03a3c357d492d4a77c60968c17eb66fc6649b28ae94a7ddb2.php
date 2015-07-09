@@ -30,7 +30,7 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
         // line 4
         echo "<h1 class=\"header-list\">Horarios</h1>
 
-    <table class=\"table-list table\">
+    <table class=\"table-list table tabla-horarios\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -66,7 +66,7 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
             // line 22
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["entity"], "horafin", array()), "H:i"), "html", null, true);
             echo "</td>
-                <td>
+                <td class=\"ancho-botones\">
                 <ul class=\"acciones-tb\">
                     <li class=\"list-tb\">
                         <a href=\"";
@@ -98,7 +98,7 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
     </table>
 
          <ul>
-        <li class=\"list-tb\">
+        <li class=\"list-tb opciones-horarios\">
             <a href=\"";
         // line 45
         echo $this->env->getExtension('routing')->getPath("horario_new");

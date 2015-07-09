@@ -63,3 +63,61 @@
 	width: 40%;
 	margin-left: 15px;
 }
+
+.list-group,
+.header-list {
+	width: 750px !important; 
+	margin: 20px auto !important;
+}
+
+.list-group .info {
+	width: 550px; 
+	float: left;
+	margin-right: 10px;
+}
+
+.btn-custom {
+	color: #FFF !important;
+	background-color: #337AB7 !important;
+	border-color: #2E6DA4 !important;
+}
+
+.btn-custom:hover {
+	background-color: #265a88 !important;
+  	background-position: 0 -15px !important;
+}
+
+.fila {
+	margin-bottom: 10px;
+}
+
+.tabla-horario {
+	width: 300px !important;
+	margin-left: 25%;
+}
+
+.opciones-horario {
+	margin-left: 20%;
+}
+
+.tabla-carreras {
+	width: 60% !important;
+	margin-left: 25%;
+}
+
+.opciones-carreras {
+	margin-left: 20%;
+}
+
+.ancho-botones{
+	width: 15%;
+}
+
+.tabla-horarios {
+	margin: 0 auto;
+	width: 70% !important;
+}
+
+.opciones-horarios {
+	margin-left: 15%;
+}

@@ -2,7 +2,7 @@
 
 {% block body -%}
      <h1 class="header-list">Curso-Correquisito</h1>
-<table class="table-list table record_properties">
+    <table class="table-list table record_properties">
         <thead>
             <tr>                
                 <th>Curso</th>                             
@@ -10,13 +10,13 @@
         </thead>
         <tbody>
             <tr>                       
-                <td>{{ entity.id }}</td>       
+                <td>{{ entity.curso ~ ' - ' ~ entity.corequisito }}</td>       
             </tr>
         </tbody>
 
      </table>
 
-<ul class="record_actions">
+    <ul class="record_actions">
         <li class="list-tb">
             <a href="{{ path('cursoCorequisito') }}"><button class="button-new btn btn-primary">Volver a la lista </button></a>
         </li>

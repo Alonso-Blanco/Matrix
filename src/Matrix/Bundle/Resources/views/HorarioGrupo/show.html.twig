@@ -1,28 +1,43 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>HorarioGrupo</h1>
+    <h1 class="header-list">Horario de Grupo</h1>
 
-    <table class="record_properties">
+    <table class="table-list table tabla-horario">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
+                <th>Grupo</th>
+                <td>{{ entity.grupo.numerogrupo }}</td>
+            </tr>
+            <tr>
+                <th>Curso</th>
+                <td>{{ entity.grupo.curso.nombreCurso }}</td>
+            </tr>
+            <tr>
+                <th>Día</th>
+                <td>{{ entity.horario.dia }}</td>
+            </tr>
+            <tr>
+                <th>Hora de Inicio</th>
+                <td>{{ entity.horario.horainicio|date("H:i") }}</td>
+            </tr>
+            <tr>
+                <th>Hora de Fin</th>
+                <td>{{ entity.horario.horafin|date("H:i") }}</td>
             </tr>
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('horariogrupo') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('horariogrupo_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <ul>
+        <li class="list-tb opciones-horario">
+            <a href="{{ path('horariogrupo') }}">
+                <button class="button-new btn btn-primary">Volver a la lista</button>
+            </a>
+        </li>
+        <li class="list-tb">
+            <a href="{{ path('horariogrupo_edit', { 'id': entity.id }) }}">
+                <button class="btn btn-default">Editar</button>
+            </a>
+        </li>
+    </ul>
 {% endblock %}
