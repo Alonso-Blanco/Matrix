@@ -253,7 +253,9 @@ class CursoController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         
-        $id_usuario  = $request->get('id');
+        //$id_usuario  = $request->get('id');
+        $session = $request->getSession();
+        $id_usuario = $session -> get('login') -> getId();
 
         $sql="SELECT c2.'id', c2.'nombreCurso', c2.'sigla', g2.'numerogrupo', eg2.'nota' FROM MatrixBundle:Usuario as u2 
         INNER JOIN MatrixBundle:EstudianteGrupo as eg2
@@ -263,7 +265,7 @@ class CursoController extends Controller
         INNER JOIN MatrixBundle:Curso as c2
         with c2.id = g2.curso
         where u2.id = :id " ;
-        $result= $em->createQuery($sql)->setParameter('id', 12)->getResult();
+        $result= $em->createQuery($sql)->setParameter('id', $id_usuario)->getResult();
         
         $form = $this->createFormBuilder($result)
         
@@ -286,7 +288,8 @@ class CursoController extends Controller
         {
             $em = $this->getDoctrine()->getManager();
             
-            $id_usuario  = $request->get('id');
+            $session = $request->getSession();
+            $id_usuario = $session -> get('login') -> getId();
 
             $sql="SELECT c2.'id', c2.'nombreCurso', c2.'sigla', g2.'numerogrupo', eg2.'nota' FROM MatrixBundle:Usuario as u2 
             INNER JOIN MatrixBundle:EstudianteGrupo as eg2
@@ -296,7 +299,7 @@ class CursoController extends Controller
             INNER JOIN MatrixBundle:Curso as c2
             with c2.id = g2.curso
             where u2.id = :id and eg2.nota >= 70";
-            $result= $em->createQuery($sql)->setParameter('id', 12)->getResult();
+            $result= $em->createQuery($sql)->setParameter('id', $id_usuario)->getResult();
             
             $form = $this->createFormBuilder($result)
             

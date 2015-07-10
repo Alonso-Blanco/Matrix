@@ -28,42 +28,66 @@ class __TwigTemplate_ce956920af03ba7937e73dfa102de7ec1867f5f70543860b10af1886543
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>HorarioGrupo</h1>
+        echo "<h1 class=\"header-list\">Horario de Grupo</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table-list table tabla-horario\">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Grupo</th>
                 <td>";
         // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "grupo", array()), "numerogrupo", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Curso</th>
+                <td>";
+        // line 14
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "grupo", array()), "curso", array()), "nombreCurso", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Día</th>
+                <td>";
+        // line 18
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horario", array()), "dia", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Hora de Inicio</th>
+                <td>";
+        // line 22
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horario", array()), "horainicio", array()), "H:i"), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Hora de Fin</th>
+                <td>";
+        // line 26
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "horario", array()), "horafin", array()), "H:i"), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
     </table>
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 17
+    <ul>
+        <li class=\"list-tb opciones-horario\">
+            <a href=\"";
+        // line 33
         echo $this->env->getExtension('routing')->getPath("horariogrupo");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 22
+                <button class=\"button-new btn btn-primary\">Volver a la lista</button>
+            </a>
+        </li>
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 38
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("horariogrupo_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()))), "html", null, true);
         echo "\">
-            Edit
-        </a>
-    </li>
-    <li>";
-        // line 26
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+                <button class=\"btn btn-default\">Editar</button>
+            </a>
+        </li>
+    </ul>
 ";
     }
 
@@ -79,6 +103,6 @@ class __TwigTemplate_ce956920af03ba7937e73dfa102de7ec1867f5f70543860b10af1886543
 
     public function getDebugInfo()
     {
-        return array (  64 => 26,  57 => 22,  49 => 17,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  85 => 38,  77 => 33,  67 => 26,  60 => 22,  53 => 18,  46 => 14,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

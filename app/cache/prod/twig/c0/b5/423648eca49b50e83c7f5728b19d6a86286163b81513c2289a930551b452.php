@@ -34,11 +34,12 @@ class __TwigTemplate_c0b5423648eca49b50e83c7f5728b19d6a86286163b81513c2289a93055
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form');
         echo "
+    <p>Nota: la contraseña debe tener entre 8 y 14 caracteres y debe tener al menos un caractér especial</p>
 
-        <ul class=\"record_actions\">
+<ul class=\"record_actions\">
     <li class=\"list-tb\">
         <a href=\"";
-        // line 10
+        // line 11
         echo $this->env->getExtension('routing')->getPath("usuario");
         echo "\">
             <button class=\"button-new btn btn-primary\">Volver lista Usuarios</button>
@@ -60,6 +61,6 @@ class __TwigTemplate_c0b5423648eca49b50e83c7f5728b19d6a86286163b81513c2289a93055
 
     public function getDebugInfo()
     {
-        return array (  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  43 => 11,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

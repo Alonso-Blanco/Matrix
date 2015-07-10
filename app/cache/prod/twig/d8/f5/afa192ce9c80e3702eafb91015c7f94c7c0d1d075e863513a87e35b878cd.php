@@ -28,26 +28,30 @@ class __TwigTemplate_d8f5afa192ce9c80e3702eafb91015c7f94c7c0d1d075e863513a87e35b
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Horario edit</h1>
+        echo "<h1 class=\"header-list\">Editar Horario</h1>
 
     ";
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : null), 'form');
         echo "
-
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 10
-        echo $this->env->getExtension('routing')->getPath("horario");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
     <li>";
-        // line 14
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
         echo "</li>
+
+        <ul class=\"record_actions\">
+             <ul>
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 12
+        echo $this->env->getExtension('routing')->getPath("horario");
+        echo "\">
+                <button class=\"button-new btn btn-primary\">Volver a la lista </button>
+            </a>
+        </li>
+       </ul>
+ 
+   
 </ul>
 ";
     }
@@ -64,6 +68,6 @@ class __TwigTemplate_d8f5afa192ce9c80e3702eafb91015c7f94c7c0d1d075e863513a87e35b
 
     public function getDebugInfo()
     {
-        return array (  49 => 14,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  47 => 12,  39 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

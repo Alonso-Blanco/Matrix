@@ -59,7 +59,7 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
     public function block_body($context, array $blocks = array())
     {
         // line 15
-        echo "<h1 class=\"header-list\">Cursos Aprobados</h1> 
+        echo "<h1 class=\"header-list titulo-no-centrado\">Cursos Aprobados</h1> 
     <div class=\"col-md-4 text-center col-md-offset-3\">
     <table class=\"records_list table table-striped\">
         <thead>
@@ -89,14 +89,13 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
             // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["e"], "nota", array()), "html", null, true);
             echo "</td>               
-
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 33
         echo "        </tbody>
     </table>
     </div>
@@ -117,6 +116,6 @@ class __TwigTemplate_3e91de422bc1b148b8bc9b66145f7e2349b77b951c8ce4a79b9fad2a240
 
     public function getDebugInfo()
     {
-        return array (  100 => 34,  90 => 30,  86 => 29,  82 => 28,  79 => 27,  75 => 26,  62 => 15,  59 => 14,  51 => 10,  48 => 9,  42 => 6,  38 => 5,  33 => 4,  30 => 3,  11 => 1,);
+        return array (  99 => 33,  90 => 30,  86 => 29,  82 => 28,  79 => 27,  75 => 26,  62 => 15,  59 => 14,  51 => 10,  48 => 9,  42 => 6,  38 => 5,  33 => 4,  30 => 3,  11 => 1,);
     }
 }

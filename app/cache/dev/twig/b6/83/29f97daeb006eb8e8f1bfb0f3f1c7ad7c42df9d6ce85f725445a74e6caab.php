@@ -28,7 +28,7 @@ class __TwigTemplate_b68329f97daeb006eb8e8f1bfb0f3f1c7ad7c42df9d6ce85f725445a74e
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1 class=\"header-list\">Requisitos de los Cursos</h1>
+        echo "<h1 class=\"header-list titulo-no-centrado\">Requisitos de los Cursos</h1>
 
     <div class=\"list-group\">
     ";

@@ -38,6 +38,12 @@ class Usuario
      * @var string
      *
      * @ORM\Column(name="contrasena", type="string", length=14, nullable=false)
+     * @Assert\Length(
+     *      min = 8,
+     *      max = 14,
+     *      minMessage = "La contraseña debe tener al menos {{ limit }} caracteres",
+     *      maxMessage = "La contraseña debe tener menos de {{ limit }} caracteres"
+     * )
      */
     private $contrasena;
 
@@ -45,12 +51,6 @@ class Usuario
      * @var string
      *
      * @ORM\Column(name="rol", type="string", nullable=false)
-     * @Assert\Length(
-     *      min = 8,
-     *      max = 16,
-     *      minMessage = "La contraseña debe tener al menos {{ limit }} caracteres",
-     *      maxMessage = "La contraseña debe tener menos de {{ limit }} caracteres"
-     * )
      */
     private $rol;
 
@@ -72,10 +72,6 @@ class Usuario
      * @var string
      *
      * @ORM\Column(name="carne", type="string", length=7, nullable=true)
-     * @Assert\Type(
-     *     type="integer",
-     *     message="El texto no es un número válido."
-     * )
      */
     private $carne;
 
@@ -90,10 +86,6 @@ class Usuario
      * @var string
      *
      * @ORM\Column(name="direccion", type="text", nullable=true)
-     * @Assert\Type(
-     *     type="integer",
-     *     message="El texto no es un número válido."
-     * )
      */
     private $direccion;
 

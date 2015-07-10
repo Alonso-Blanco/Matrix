@@ -148,3 +148,32 @@
 	width: 65% !important;
 	margin: 0 auto;
 }
+
+.principal {
+	text-align: center;
+	color: #265a88;
+}
+
+.barra {
+	background-color: #337ab7 !important;
+}
+.barra a {
+	color: white !important;
+}
+
+.barra a:hover {
+	color: black !important;
+}
+
+.body {
+	background-color: #EFF5FB !important;
+}
+
+.header-list {
+	color: #337ab7;
+	text-align: center;	
+}
+
+.titulo-no-centrado {
+	text-align: left !important;	
+}

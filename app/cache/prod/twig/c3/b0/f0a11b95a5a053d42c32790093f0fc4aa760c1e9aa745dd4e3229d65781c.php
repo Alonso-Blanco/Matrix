@@ -28,23 +28,24 @@ class __TwigTemplate_c3b0f0a11b95a5a053d42c32790093f0fc4aa760c1e9aa745dd4e3229d6
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Horario creation</h1>
+        echo "<h1 class=\"header-list\">Nuevo Horario</h1>
 
     ";
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form');
         echo "
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+       <ul>
+        <li class=\"list-tb\">
+            <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("horario");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-</ul>
+                <button class=\"button-new btn btn-primary\">Volver a la lista</button>
+            </a>
+        </li>
+       </ul>
+
 ";
     }
 

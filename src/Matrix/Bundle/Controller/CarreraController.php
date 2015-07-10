@@ -254,7 +254,7 @@ class CarreraController extends Controller
     
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('MatrixBundle:Usuario');
-        $usuario = $repository-> findOneBy(array('cedula'=> $cedula));
+        $usuario = $repository-> find($session -> get('login') -> getId());
 
         $repository = $em->getRepository('MatrixBundle:Curso');
         $cursos = $repository-> findBy(array('carrera'=> $usuario->getCarrera()));

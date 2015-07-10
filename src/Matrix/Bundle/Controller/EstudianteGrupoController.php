@@ -266,7 +266,7 @@ class EstudianteGrupoController extends Controller
         $cedula = $session -> get('login') -> getCedula();
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('MatrixBundle:Usuario');
-        $usuario = $repository-> findOneBy(array('cedula'=> $cedula));
+        $usuario = $repository-> find($session -> get('login') -> getId());
 
         $carrera_id = $usuario->getCarrera()->getId();
         $usuario_id = $usuario->getId();
@@ -391,7 +391,8 @@ class EstudianteGrupoController extends Controller
     
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('MatrixBundle:Usuario');
-        $usuario = $repository-> findOneBy(array('cedula'=> $cedula));
+        $usuario = $repository-> find($session -> get('login') -> getId());
+        //$usuario = $repository-> findOneBy(array('cedula'=> $cedula));
         $repository2 = $em->getRepository('MatrixBundle:Grupo');
         $grupo = $repository2-> find($id);
     
@@ -413,7 +414,7 @@ class EstudianteGrupoController extends Controller
     
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('MatrixBundle:Usuario');
-        $usuario = $repository-> findOneBy(array('cedula'=> $cedula));
+        $usuario = $repository-> find($session -> get('login') -> getId());
         $repository2 = $em->getRepository('MatrixBundle:Grupo');
         $grupos = $repository2-> findBy(array('profesor'=> $usuario));
     

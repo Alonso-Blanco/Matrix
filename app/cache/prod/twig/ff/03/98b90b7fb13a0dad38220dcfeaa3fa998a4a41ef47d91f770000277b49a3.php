@@ -28,27 +28,28 @@ class __TwigTemplate_ff0398b90b7fb13a0dad38220dcfeaa3fa998a4a41ef47d91f770000277
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>HorarioGrupo edit</h1>
+        echo "<h1 class=\"header-list\">Editar Horario de Grupos</h1>
 
-    ";
-        // line 6
+ <ul class=\"record_actions\">
+     ";
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : null), 'form');
         echo "
-
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 10
+     <ul>     \t
+     \t";
+        // line 9
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
+        echo "
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 11
         echo $this->env->getExtension('routing')->getPath("horariogrupo");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>";
-        // line 14
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+                <button class=\"button-new btn btn-primary\">Volver a la lista </button>
+            </a>
+        </li>
+ </ul>
+
 ";
     }
 
@@ -64,6 +65,6 @@ class __TwigTemplate_ff0398b90b7fb13a0dad38220dcfeaa3fa998a4a41ef47d91f770000277
 
     public function getDebugInfo()
     {
-        return array (  49 => 14,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  46 => 11,  41 => 9,  36 => 7,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

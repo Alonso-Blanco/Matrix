@@ -28,9 +28,9 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Horario list</h1>
+        echo "<h1 class=\"header-list\">Horarios</h1>
 
-    <table class=\"records_list\">
+    <table class=\"table-list table tabla-horarios\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -66,42 +66,47 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
             // line 22
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["entity"], "horafin", array()), "H:i"), "html", null, true);
             echo "</td>
-                <td>
-                <ul>
-                    <li>
+                <td class=\"ancho-botones\">
+                <ul class=\"acciones-tb\">
+                    <li class=\"list-tb\">
                         <a href=\"";
             // line 26
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("horario_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
+            echo "\">
+                            <button class=\"btn btn-default\">Ver</button>
+                        </a>
                     </li>
-                    <li>
+                    <li class=\"list-tb\">
                         <a href=\"";
-            // line 29
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("horario_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
+            echo "\">
+                            <button class=\"btn btn-default\">Editar</button>
+                        </a>
                     </li>
                 </ul>
                 </td>
             </tr>
+
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 40
         echo "        </tbody>
     </table>
 
-        <ul>
-        <li>
+         <ul>
+        <li class=\"list-tb opciones-horarios\">
             <a href=\"";
-        // line 40
+        // line 45
         echo $this->env->getExtension('routing')->getPath("horario_new");
         echo "\">
-                Create a new entry
+                <button class=\"button-new btn btn-primary\">Crear nuevo Horario</button>
             </a>
         </li>
-    </ul>
+       </ul>
     ";
     }
 
@@ -117,6 +122,6 @@ class __TwigTemplate_2fd37a6578a48db03a3c357d492d4a77c60968c17eb66fc6649b28ae94a
 
     public function getDebugInfo()
     {
-        return array (  99 => 40,  92 => 35,  80 => 29,  74 => 26,  67 => 22,  63 => 21,  59 => 20,  53 => 19,  50 => 18,  46 => 17,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  104 => 45,  97 => 40,  82 => 31,  74 => 26,  67 => 22,  63 => 21,  59 => 20,  53 => 19,  50 => 18,  46 => 17,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

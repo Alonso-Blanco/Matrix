@@ -28,27 +28,28 @@ class __TwigTemplate_d4194c84d1fa17c42c534fbe94ef9858cabb9f3881b43916371c8f8a693
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoCorequisito edit</h1>
+        echo "<h1 class=\"header-list\">Correquisito</h1>
 
-    ";
-        // line 6
+ <ul class=\"record_actions\">
+     ";
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : null), 'form');
         echo "
-
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 10
-        echo $this->env->getExtension('routing')->getPath("cursocorequisito");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>";
-        // line 14
+     <ul>     \t
+     \t";
+        // line 9
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+        echo "
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 11
+        echo $this->env->getExtension('routing')->getPath("cursoCorequisito");
+        echo "\">
+                <button class=\"button-new btn btn-primary\">Volver a la lista </button>
+            </a>
+        </li>
+ </ul>
+
 ";
     }
 
@@ -64,6 +65,6 @@ class __TwigTemplate_d4194c84d1fa17c42c534fbe94ef9858cabb9f3881b43916371c8f8a693
 
     public function getDebugInfo()
     {
-        return array (  49 => 14,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  46 => 11,  41 => 9,  36 => 7,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

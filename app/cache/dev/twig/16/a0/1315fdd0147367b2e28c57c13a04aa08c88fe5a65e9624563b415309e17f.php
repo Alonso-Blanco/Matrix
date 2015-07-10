@@ -52,7 +52,7 @@ class __TwigTemplate_16a01315fdd0147367b2e28c57c13a04aa08c88fe5a65e9624563b41530
         <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
     </head>
-    <body>
+    <body class=\"body\">
         
         ";
         // line 17
@@ -77,7 +77,7 @@ class __TwigTemplate_16a01315fdd0147367b2e28c57c13a04aa08c88fe5a65e9624563b41530
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        echo "Welcome!";
+        echo "Matrix";
     }
 
     // line 6
@@ -92,7 +92,7 @@ class __TwigTemplate_16a01315fdd0147367b2e28c57c13a04aa08c88fe5a65e9624563b41530
         echo "            ";
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array(), "any", false, true), "get", array(0 => "login"), "method", false, true), "rol", array(), "any", true, true)) {
             // line 19
-            echo "               <nav class=\"navbar navbar-default navbar-fixed-top\">
+            echo "               <nav class=\"navbar navbar-default navbar-fixed-top barra\">
                   <div class=\"container\">
                     <div class=\"navbar-header\">
                       <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">
@@ -101,7 +101,10 @@ class __TwigTemplate_16a01315fdd0147367b2e28c57c13a04aa08c88fe5a65e9624563b41530
                         <span class=\"icon-bar\"></span>
                         <span class=\"icon-bar\"></span>
                       </button>
-                    <a class=\"navbar-brand\" href=\"#\">Matrix</a>
+                    <a class=\"navbar-brand\" href=\"";
+            // line 28
+            echo $this->env->getExtension('routing')->getPath("inicio");
+            echo "\">Matrix</a>
                     </div>
                     <div id=\"navbar\" class=\"collapse navbar-collapse\">
                       <ul class=\"nav navbar-nav\"> 
@@ -248,6 +251,6 @@ class __TwigTemplate_16a01315fdd0147367b2e28c57c13a04aa08c88fe5a65e9624563b41530
 
     public function getDebugInfo()
     {
-        return array (  235 => 87,  230 => 84,  226 => 82,  216 => 76,  211 => 74,  207 => 73,  203 => 72,  195 => 67,  189 => 64,  183 => 61,  172 => 53,  167 => 52,  160 => 48,  153 => 44,  147 => 42,  142 => 40,  138 => 39,  134 => 38,  130 => 37,  126 => 36,  122 => 35,  118 => 34,  114 => 33,  110 => 32,  95 => 19,  92 => 18,  89 => 17,  84 => 6,  78 => 5,  72 => 88,  70 => 87,  66 => 85,  64 => 84,  61 => 83,  59 => 17,  49 => 10,  45 => 9,  41 => 8,  36 => 7,  34 => 6,  30 => 5,  24 => 1,);
+        return array (  238 => 87,  233 => 84,  229 => 82,  219 => 76,  214 => 74,  210 => 73,  206 => 72,  198 => 67,  192 => 64,  186 => 61,  175 => 53,  170 => 52,  163 => 48,  156 => 44,  150 => 42,  145 => 40,  141 => 39,  137 => 38,  133 => 37,  129 => 36,  125 => 35,  121 => 34,  117 => 33,  113 => 32,  106 => 28,  95 => 19,  92 => 18,  89 => 17,  84 => 6,  78 => 5,  72 => 88,  70 => 87,  66 => 85,  64 => 84,  61 => 83,  59 => 17,  49 => 10,  45 => 9,  41 => 8,  36 => 7,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

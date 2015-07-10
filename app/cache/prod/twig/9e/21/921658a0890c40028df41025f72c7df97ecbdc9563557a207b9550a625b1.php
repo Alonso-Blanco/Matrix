@@ -115,7 +115,7 @@ class __TwigTemplate_9e21921658a0890c40028df41025f72c7df97ecbdc9563557a207b9550a
             <a href=\"";
         // line 48
         echo $this->env->getExtension('routing')->getPath("usuario_new");
-        echo "\"><button class=\"button-new btn btn-primary\">Crear nuevo Curso</button></a>
+        echo "\"><button class=\"button-new btn btn-primary\">Crear Nuevo Usuario</button></a>
         </li>
     </ul>
     ";

@@ -28,7 +28,7 @@ class __TwigTemplate_a537e59e08605e296e54d2d0c6c6e2c4da410b64d82ce8015cc586e7eb5
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1 class=\"header-list\">Cursos para Matricular</h1>
+        echo "<h1 class=\"header-list titulo-no-centrado\">Cursos para Matricular</h1>
 
 
 \t<div class=\"list-group\">
@@ -39,10 +39,7 @@ class __TwigTemplate_a537e59e08605e296e54d2d0c6c6e2c4da410b64d82ce8015cc586e7eb5
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
             // line 9
             echo "\t\t<div class=\"fila\">
-            <a href=\"";
-            // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("curso_show", array("id" => $this->getAttribute($context["e"], "id", array()))), "html", null, true);
-            echo "\" class=\"list-group-item activable info\">
+            <a href=\"#\" class=\"list-group-item activable info\">
               ";
             // line 11
             echo twig_escape_filter($this->env, (($this->getAttribute($context["e"], "sigla", array()) . " - ") . $this->getAttribute($context["e"], "nombreCurso", array())), "html", null, true);
@@ -80,6 +77,6 @@ class __TwigTemplate_a537e59e08605e296e54d2d0c6c6e2c4da410b64d82ce8015cc586e7eb5
 
     public function getDebugInfo()
     {
-        return array (  66 => 20,  53 => 13,  48 => 11,  44 => 10,  41 => 9,  37 => 8,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  63 => 20,  50 => 13,  45 => 11,  41 => 9,  37 => 8,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

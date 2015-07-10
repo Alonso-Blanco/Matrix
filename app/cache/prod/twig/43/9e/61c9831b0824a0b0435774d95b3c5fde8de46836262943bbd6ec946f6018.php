@@ -28,42 +28,46 @@ class __TwigTemplate_439e61c9831b0824a0b0435774d95b3c5fde8de46836262943bbd6ec946
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoRequisito</h1>
+        echo "<h1 class=\"header-list\">Curso-Requisito</h1>
 
-    <table class=\"record_properties\">
+    <table class=\"table-list table record_properties\">
+        <thead>
+            <tr>                
+                <th>Curso</th>                             
+            </tr>
+        </thead>
         <tbody>
-            <tr>
-                <th>Id</th>
+            <tr>                       
                 <td>";
-        // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()), "html", null, true);
-        echo "</td>
+        // line 14
+        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "curso", array()) . " - ") . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "requisito", array())), "html", null, true);
+        echo "</td>       
             </tr>
         </tbody>
-    </table>
 
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
-        // line 17
+     </table>
+     <ul class=\"record_actions\">
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 21
         echo $this->env->getExtension('routing')->getPath("cursoRequisito");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 22
+        echo "\"><button class=\"button-new btn btn-primary\">Volver a la Lista</button></a>
+        </li>
+        <li class=\"list-tb\">
+            <a href=\"";
+        // line 24
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("cursoRequisito_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : null), "id", array()))), "html", null, true);
-        echo "\">
-            Edit
-        </a>
-    </li>
-    <li>";
-        // line 26
+        echo "\"><button class=\"button-new btn btn-primary\">Editar</button></a>
+        </li>
+        
+        ";
+        // line 27
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+        echo "
+
+    </ul>
+
+
 ";
     }
 
@@ -79,6 +83,6 @@ class __TwigTemplate_439e61c9831b0824a0b0435774d95b3c5fde8de46836262943bbd6ec946
 
     public function getDebugInfo()
     {
-        return array (  64 => 26,  57 => 22,  49 => 17,  39 => 10,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  65 => 27,  59 => 24,  53 => 21,  43 => 14,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

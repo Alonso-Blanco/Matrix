@@ -28,27 +28,26 @@ class __TwigTemplate_519a3c68456157bd1b30e492e217a33ecdf1ab8a42239c2d76b86cb7c6f
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>CursoRequisito edit</h1>
-
-    ";
+        echo "<h1>Requisito</h1>
+    <ul class=\"record_actions\">
+     ";
         // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : null), 'form');
         echo "
-
-        <ul class=\"record_actions\">
-    <li>
-        <a href=\"";
+     <ul>     \t
+     \t";
+        // line 8
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
+        echo "
+        <li class=\"list-tb\">
+            <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("cursoRequisito");
         echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>";
-        // line 14
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : null), 'form');
-        echo "</li>
-</ul>
+                <button class=\"button-new btn btn-primary\">Volver a la lista </button>
+            </a>
+        </li>
+ </ul>
 ";
     }
 
@@ -64,6 +63,6 @@ class __TwigTemplate_519a3c68456157bd1b30e492e217a33ecdf1ab8a42239c2d76b86cb7c6f
 
     public function getDebugInfo()
     {
-        return array (  49 => 14,  42 => 10,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  45 => 10,  40 => 8,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

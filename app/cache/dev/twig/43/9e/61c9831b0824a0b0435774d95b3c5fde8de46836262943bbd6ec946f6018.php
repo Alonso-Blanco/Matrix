@@ -51,7 +51,7 @@ class __TwigTemplate_439e61c9831b0824a0b0435774d95b3c5fde8de46836262943bbd6ec946
             <a href=\"";
         // line 21
         echo $this->env->getExtension('routing')->getPath("cursoRequisito");
-        echo "\"><button class=\"button-new btn btn-primary\">Volver a los Cursos</button></a>
+        echo "\"><button class=\"button-new btn btn-primary\">Volver a la Lista</button></a>
         </li>
         <li class=\"list-tb\">
             <a href=\"";

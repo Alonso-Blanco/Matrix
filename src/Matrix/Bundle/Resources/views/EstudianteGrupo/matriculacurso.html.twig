@@ -1,13 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-<h1 class="header-list">Cursos para Matricular</h1>
+<h1 class="header-list titulo-no-centrado">Cursos para Matricular</h1>
 
 
 	<div class="list-group">
     {% for e in entity %}
 		<div class="fila">
-            <a href="{{ path('curso_show', { 'id': e.id }) }}" class="list-group-item activable info">
+            <a href="#" class="list-group-item activable info">
               {{ e.sigla ~ ' - ' ~ e.nombreCurso }}
             </a>
             <a href="{{ path('estudiantegrupo_matriculagrupo', { 'id': e.id }) }}" class="opciones">

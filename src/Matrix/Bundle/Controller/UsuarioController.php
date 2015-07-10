@@ -271,6 +271,7 @@ class UsuarioController extends Controller
               $login -> setCedula($cedula);
               $login -> setContrasena($contrasena);
               $login -> setRol( $usuario ->getRol());
+              $login -> setCarrera( $usuario ->getCarrera());
               $session -> clear();
               $session = $request->getSession();
               $session -> set('login',$login); 

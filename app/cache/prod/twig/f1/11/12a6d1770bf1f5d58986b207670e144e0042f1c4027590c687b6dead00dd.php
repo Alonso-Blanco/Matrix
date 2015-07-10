@@ -27,26 +27,38 @@ class __TwigTemplate_f11112a6d1770bf1f5d58986b207670e144e0042f1c4027590c687b6dea
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        // line 5
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["entity"]) ? $context["entity"] : null));
-        foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 6
-            echo "            <a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("estudiantegrupo_asignarnoras", array("id" => $this->getAttribute($context["e"], "id", array()))), "html", null, true);
-            echo "\">
-                <h3>Grupo: ";
-            // line 7
-            echo twig_escape_filter($this->env, $context["e"], "html", null, true);
-            echo "</h3>
-            </a>
+        // line 4
+        echo "<h1 class=\"header-list\">Administrar Grupos</h1>
 
+    <div class=\"list-group\">
+    ";
+        // line 7
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($context["entity"]);
+        foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
+            // line 8
+            echo "        <div class=\"fila\">
+            <a href=\"#\" class=\"list-group-item activable info\">
+              Grupo: ";
+            // line 10
+            echo twig_escape_filter($this->env, $context["entity"], "html", null, true);
+            echo "
+            </a>
+            <a href=\"";
+            // line 12
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("estudiantegrupo_asignarnoras", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
+            echo "\" class=\"opciones\">
+              <button class=\"list-group-item btn btn-custom\">
+                Gestionar Notas
+              </button>
+            </a>
+        </div>
     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 19
         echo "
 </table>
 ";
@@ -64,6 +76,6 @@ class __TwigTemplate_f11112a6d1770bf1f5d58986b207670e144e0042f1c4027590c687b6dea
 
     public function getDebugInfo()
     {
-        return array (  50 => 11,  40 => 7,  35 => 6,  31 => 5,  28 => 3,  11 => 1,);
+        return array (  62 => 19,  49 => 12,  44 => 10,  40 => 8,  36 => 7,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

@@ -30,7 +30,7 @@ class __TwigTemplate_8ad265992b7ced79502b44d4bed7edaa10bc7ce5e9228eda9be21cb3261
         // line 4
         echo "<h1 class=\"header-list\">Lista de Carreras</h1>
 
-    <table class=\"table-list table records_list\">
+    <table class=\"table-list table records_list tabla-carreras\">
         <thead>
             <tr>                
                 <th>Código Carrera</th>
@@ -85,7 +85,7 @@ class __TwigTemplate_8ad265992b7ced79502b44d4bed7edaa10bc7ce5e9228eda9be21cb3261
     </table>
 
         <ul>
-        <li class=\"list-tb\">
+        <li class=\"list-tb opciones-carreras\">
             <a href=\"";
         // line 40
         echo $this->env->getExtension('routing')->getPath("carrera_new");
